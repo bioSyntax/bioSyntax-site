@@ -1,0 +1,1 @@
+./_posts/2017-12-01-index_post.md

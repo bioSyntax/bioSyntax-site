@@ -1,0 +1,51 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
+
+<body id="site-index" {% if page.image.feature %}class="feature"{% endif %}>
+
+{% include navigation.html %}
+
+<!-- HEADER -->
+<div class="entry-header">
+  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+
+  {% if page.image.feature %}
+    <div class="entry-image">
+      <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+    </div><!-- /.entry-image -->
+  {% endif %}
+
+  <div class="header-title">
+    <div class="header-title-wrap">
+       <b><font face="Courier" size="14" color="#47FF19" >bio</font><font face="Courier" size="14" color="#FF0000">Syntax</font><font face="Courier" size="14" color="black">:</font></b>
+      <!-- <h2>{{ site.description }}</h2> -->
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+<!-- MAIN CONTENT -->
+<div id="main" role="main">
+  <a href="https://github.com/ababaian/bioSyntax/archive/master.zip"><span class="btn btn-warning">Download</span></a>
+  <a href="{{ site.url }}/install"><span class="btn btn-success">Install</span></a>
+  <a href="{{ site.url }}/man"><span class="btn btn-info">Documentation</span></a>
+  <a href="{{ site.url }}/screenshots"><span class="btn btn-info">Screenshots</span></a>
+  <a href="https://github.com/ababaian/bioSyntax"><span class="btn btn-info">View Source</span></a>
+  {{ content }}
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}          
+
+</body>
+</html>

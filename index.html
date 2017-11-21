@@ -1,0 +1,19 @@
+---
+title: Home
+description: "Syntax Highlighting for Computational Biologists."
+layout: site-index
+comments: false
+image:
+  feature: nt-banner.jpg
+---
+
+{% for post in paginator.posts %}
+<article class="hentry">
+  <header>
+  </header>
+  <div class="entry-content">
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
+{% include pagination.html %}
