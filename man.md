@@ -2,7 +2,7 @@
 layout: page
 title: bioSyntax Manual
 image:
-  feature: abstract-5.jpg
+  feature: abstract-3.jpg
 comments: false
 markdown: kramdown
 ---
@@ -98,10 +98,10 @@ File format and software compatibility matrix for bioSyntax.
 | File Format | Description                 | sublime | vim | gedit | less |
 |:------------|:----------------------------|:-------:|:---:|:-----:|:----:|
 | .fasta      | Generic nt/aa sequence      |    X    |  X  |   X   |   X  |
-| .fastq      | Fasta + PHRED quality       |    X    |  X  |   X   |   -  |
-| .clustal    | Multiple Sequence Alignment |    X    |  o  |   X   |   -  |
-| .bed        | Genomic Ranges              |    X    |  o  |   X   |   -  |
-| .gtf        | Genomic Annotation          |    X    |  o  |   o   |   -  |
+| .fastq      | Fasta + PHRED quality       |    X    |  -  |   -   |   X  |
+| .clustal    | Multiple Sequence Alignment |    X    |  o  |   X   |   X  |
+| .bed        | Genomic Ranges              |    X    |  o  |   X   |   X  |
+| .gtf        | Genomic Annotation          |    X    |  o  |   o   |   X  |
 | .pdb        | Protein Structure           |    X    |  X  |   o   |   -  |
 | .vcf        | Variant Call Format         |    o    |  o  |   o   |   X  |
 | .sam        | NGS Sequence Data           |    X    |  -  |   o   |   X  |
@@ -115,8 +115,8 @@ File format and software compatibility matrix for bioSyntax.
 | -           | Taylor                      |    X    |  o  |   X   | -    |
 | -           | Zappo                       |    X    |  o  |   X   | -    |
 | -           | Hydrophobicity              |    X    |  o  |   X   | -    |
-| .fai        | Fasta Index                 |    X    |  X  |   X   | -    |
-| .flagstat   | samtools summary            |    X    |  -  |   X   | -    |
+| .fai        | Fasta Index (faidx)         |    X    |  X  |   X   | X    |
+| .flagstat   | samtools flag summary       |    X    |  -  |   X   | X    |
 | .newick     | Tree Format                 |    -    |  -  |   -   | -    |
 | .pdbx       | Protein Structure (large)   |    -    |  -  |   -   | -    |
 | .phylip     | Multiple Sequence Alignment |    -    |  -  |   -   | -    |
