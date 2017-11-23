@@ -144,6 +144,7 @@ body {
 	height: 200%;
 	min-height: $feature-image-height;
 	overflow: hidden;
+	background-color: rgba($header-color,1);
 
 	&:after {
 		content: '';
@@ -152,7 +153,9 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($base-color,0.3);
+		background-color: rgba($header-color,0.25);
+
+		
 	}
 
 	img {

@@ -19,19 +19,19 @@ The objective of bioSyntax is to bring you closer to your data, giving you an [i
 
 # Getting Started
 
-### [Installing bioSyntax -->](../install)
+### [See: Installing bioSyntax](../install)
 
-bioSyntax integreates seamlessly with `vim` (Linux / Mac / Win), `sublime` (Linux / Mac / Win), `gedit` (Linux / Win), & `less` (Linux / Mac).
+bioSyntax integreates seamlessly with **vim** *(Linux / Mac / Win)*, **sublime** *(Linux / Mac / Win)*, **gedit** *(Linux / Win)*, & **less** *(Linux / Mac)*.
 
 
 ### Reading large-data
 
-For very large data sets, it's often slow to open them in a text editor. It's best to use the command-line program `less` which will read your file from a data-stream. We currently support `.sam`, `.vcf`, & `.fasta` files for less.
+For very large data sets, it's often slow to open them in a text editor. It's best to use the command-line program **less** which will read your file from a data-stream.
 
-##### Read your large-data set with `less` directly
+##### Read your large-data set with **less** directly
 
 ```
-# If your file is uncompressed, it can be read directly
+# If your file is uncompressed, it can be read directly.
 # less will recognize the file extension (.XYZ)
 
 cd ~/myData/
@@ -40,14 +40,14 @@ less dbSNP107_common.vcf
 
 less hg19.fa
 ```
-
-##### Stream your data into `less` on the command line using pipes (`|`)
+{: .language-bash}
+##### Stream your data into **less** on the command line using pipes (`|`)
 
 ```
 # If your file is compressed, you can 'pipe' the data 
 # using the "|" operator from decompression, directly into
 # less. You must prefix the extension as file formats are
-# not recognized.
+# not recognized within streams.
 
 cd ~/myCompressedData/ 
 
@@ -55,15 +55,15 @@ samtools view -h NA12878_hg38.bam | sam-less
 
 gzip -dc dbSNP107_rare.vcf.gz | vcf-less
 
-gzip -dc hg38.fa.gz
+gzip -dc hg38.fa.gz | fa-less
 ```
-
+{: .language-bash}
 
 # Reading Data
 
 ### Nucleotides
 
-bioSyntax implements full [IUPAC Nucleotide Code](https://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation) coloring. Ambiguous bases are represented by additive color-mixing of the parent bases. For example, **T**hymine (blue) + **C**ytosine (red) are both p**Y**rimidines (magenta).
+bioSyntax implements a novel, full [IUPAC Nucleotide Code](https://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation) coloring. Ambiguous bases are represented by additive color-mixing of the parent bases. For example, **T**hymine (blue) + **C**ytosine (red) are both p**Y**rimidines (magenta).
 
 ![bioSyntax Nucleotides](../images/nt_IUPAC_v0.1.png)
 

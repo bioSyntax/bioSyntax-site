@@ -11,6 +11,8 @@ Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.gtf`, `.pdb`, & more formats.
 
 ### Usage
 
-bioSyntax integrates seamlessly with `vim`, `less`, `gedit`, & `sublime`. See the complete [file-format compatibility matrix](man#supported-file-formats)
+bioSyntax integrates seamlessly with **vim**, **less**, **gedit**, & **sublime** to automatically recognize [your favorite biological file formats](man#supported-file-formats). Large data files can also be directly piped into **less** with `sam-less`, `vcf-less`, ..., `xyz-less` commands.
 
-To learn more about reading your data, read our brief [bioSyntax Manual](man)
+To gain the most insight from your data, read our brief [bioSyntax Manual](man).
+
+### [INSTALL](install)

@@ -33,8 +33,9 @@ body {
    Colors
    ========================================================================== */
 
-$base-color                      : rgba(#222,0.8);
+$base-color                      : rgba(#222,1);
 $body-color                      : #e8e8e8;
+$header-color                    : rgba(#002b36,1);
 $text-color                      : rgba(#222,0.8);
 $comp-color                      : complement(#222);
 $border-color                    : lighten($base-color,60);
