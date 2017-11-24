@@ -21,7 +21,7 @@ The objective of bioSyntax is to bring you closer to your data, giving you an [i
 
 ### [See: Installing bioSyntax](../install)
 
-bioSyntax integreates seamlessly with **vim** *(Linux / Mac / Win)*, **sublime** *(Linux / Mac / Win)*, **gedit** *(Linux / Win)*, & **less** *(Linux / Mac)*.
+bioSyntax integreates seamlessly with **vim** *(Linux / Mac / Win)*, **sublime** *(Linux / Mac / Win)*, **gedit** *(Linux / Win)*, & **less** *(Linux / Mac)*. After installing bioSyntax files will automatically detected by file-extension.
 
 
 ### Reading large-data
@@ -41,7 +41,7 @@ less dbSNP107_common.vcf
 less hg19.fa
 ```
 {: .language-bash}
-##### Stream your data into **less** on the command line using pipes (`|`)
+##### Streaming your data directly into **less** with pipes `|`
 
 ```
 # If your file is compressed, you can 'pipe' the data 
@@ -173,10 +173,11 @@ Ideally, once you grok your file format to make a robust regex engine you'll be 
 
 If you're particular about how you want everything to look. Feel free to tweak the theme files. If you develop a theme you think is exceptionally good then we'd be happy to see it. Follow the steps for developing a file format and put in a pull request to add it to bioSyntax. 
 
-## Porting bioSyntax to `$software`
+## Porting bioSyntax to `$software_variable`
 
-The choice of text-editors we included is based on our own use. To port bioSyntax for another editor 
+The choice of text-editors we included is based on our own use. To port bioSyntax for another editor, first search the [bioSyntax Issues](https://github.com/ababaian/bioSyntax/issues) to see if someone else is working on it. If they are, help them out. If not, open an issue so others can collaborate and don't repeat your efforts. Otherwise follow the same steps as above to fork.
 
+Once the minimum set of *core syntaxes* are complete, submit the pull request to add your port to the repository.
 
 ## Other ways to help
 
