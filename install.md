@@ -8,7 +8,10 @@ modified: 2017-12-01
 ---
 # bioSyntax Installation
 
-We're working on an installer to make this easier, but if you can't wait, here's how to get bioSyntax now.
+We're working on an installer to make this easier, but if you can't wait here's how to get bioSyntax now.
+
+<a href="https://github.com/ababaian/bioSyntax/archive/master.zip"><span class="btn btn-warning">Download bioSyntax</span></a>
+
 
 1. [sublime](#sublime)
 2. [gedit](#gedit)

@@ -3,7 +3,7 @@ layout: page
 title: bioSyntax Manual
 image:
   feature: abstract-3.jpg
-comments: false
+comments: true
 markdown: kramdown
 ---
 Grok your data
@@ -46,8 +46,8 @@ less hg19.fa
 ```
 # If your file is compressed, you can 'pipe' the data 
 # using the "|" operator from decompression, directly into
-# less. You must prefix the extension as file formats are
-# not recognized within streams.
+# less. You must prefix the file extension you want
+# as file formats are not recognized within streams.
 
 cd ~/myCompressedData/ 
 
@@ -59,29 +59,56 @@ gzip -dc hg38.fa.gz | fa-less
 ```
 {: .language-bash}
 
+##### Bypassing bioSyntax (data in plain-text)
+
+```
+# You may want to view your data without syntax highlighting
+# such as where a file is improperly formatted or very large
+# files where syntax highlighting may be slow (i.e. VCF files
+# with hundreds of columns).
+
+# 1. Pipe your data through cat
+cat snp_1000genomes.vcf | less - 
+
+# 2. Within less, switch to a visual editor
+less snp_1000genomes.vcf
+  # press 'CTRL-C' to stop process
+  # press 'v' to switch to visual editor
+```
+{: .language-bash}
+
 # Reading Data
 
 ### Nucleotides
 
-bioSyntax implements a novel, full [IUPAC Nucleotide Code](https://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation) coloring. Ambiguous bases are represented by additive color-mixing of the parent bases. For example, **T**hymine (blue) + **C**ytosine (red) are both p**Y**rimidines (magenta).
+bioSyntax implements a novel, full [IUPAC Nucleotide Code](https://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation) coloring. Ambiguous bases are represented by an ~additive color-mixing of the parent bases. For example, **T**hymine (blue) + **C**ytosine (red) are both p**Y**rimidines (magenta).
 
-![bioSyntax Nucleotides](../images/nt_IUPAC_v0.1.png)
+<div style="text-align:center"><img src="../images/man/nt_IUPAC_ANSI_v0.2_web.png"></div>
 
-An intuitive feature of this color scheme is that the 'GC-content' of a sequence can be quickly approximated by how warm (high GC, red-orange) or cool (low GC, blue-green) a sequence appears.
+An intuitive feature of the bioSyntax color scheme is that the 'GC-content' of a sequence can be quickly approximated by how warm (high GC, red-orange) or cool (low GC, blue-green) a sequence looks.
+
+```
+vim myc_gcContent.fa
+```
+{: .language-bash}
+<div><img src="../images/screens/fa-vim_myc_gc.png"></div>
 
 ### PHRED Scores
 
 When available, bioSyntax will highlight [PHRED quality scores](https://en.wikipedia.org/wiki/Phred_quality_score) in a step-gradient of blacks (PHRED = 0-10) to whites (PHRED = 40+).
 
+<div><img src="../images/man/sublime-PHRED.png"></div>
+
 ### CIGAR Strings
 
-Probabaly the most cumbersome
+In `.sam` files the Query:Reference alignment is summarized efficiently but illegibly as a [CIGAR String](https://genome.sph.umich.edu/wiki/SAM#What_is_a_CIGAR.3F). With a little bit of highlighting these become much easier to read.
+
+<div><img src="../images/man/less-CIGAR.png"></div>
+
 
 ### Amino Acid Color Schemes
 
-You can choose from several color-schemes for amino-acid fasta files. The `Fasta Clustal` (Default) syntax is good for discriminating amino acids, or you may prefer `Fasta Zappo`, `Fasta Taylor` or `Fasta Hydrophobiticy` which group and color the amino acids slightly differently.
-
-### GTF / WIG Scores
+You can choose from several color-schemes for amino-acid fasta files. The `Fasta Clustal` (Default) syntax colors amino acids based on their [physiochemical properties](http://www.jalview.org/help/html/colourSchemes/clustal.html), so does `Fasta Hydrophobicity`, or you may prefer better discrimination of each amino acids with `Fasta Zappo` or `Fasta Taylor`.
 
 # Supported File Formats
 
@@ -125,23 +152,48 @@ File format and software compatibility matrix for bioSyntax.
 
 # Collaborate
 
-[ Under Construction ]
+bioSyntax is a community-oriented project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs. Once you create something helpful, chances are others will find it helpful too, so share :)
 
-bioSyntax is a community project for biological syntax highlighting. If you work with a particular file format you'd like syntax highlighting for, develop the syntax files and we'll add them. Don't worry we can help : )
+## Developing bioSyntax for `.XYZ` file format
 
-## Report a bug
+ If you work with a particular file format you'd like syntax highlighting for, develop the syntax files and we'll add them to the repository. It's surprisingly easy and we can help.
 
-## Developing bioSyntax for `.XXX` file format
+1. Fork the bioSyntax Repo
+2. Read some of the developed syntax files to learn how they function.
+3. Develop the syntax files for your format
+4. Once you're happy with it, put in a "pull request" and we'll review the code and add it to the next release.
 
-## Creating a custom theme
+You should include 3-4 small example data files (<100 kb) for testing. Widely used cases such as centralized databases or common software output are preferred.
+
+If you get stuck on a problem, open an [issue](https://github.com/ababaian/bioSyntax/issues) and someone might be able to offer a solution.
+
+Ideally, once you grok your file format to make a robust regex engine you'll be able to quickly port it for different software (**vim**, **less**, **gedit** and **sublime**).
+
+## Creating a custom theme / changing colors
+
+If you're particular about how you want everything to look. Feel free to tweak the theme files. If you develop a theme you think is exceptionally good then we'd be happy to see it. Follow the steps for developing a file format and put in a pull request to add it to bioSyntax. 
+
+## Porting bioSyntax to `$software`
+
+The choice of text-editors we included is based on our own use. To port bioSyntax for another editor 
+
 
 ## Other ways to help
 
-Right now check out the [bioSyntax Repo](https://github.com/ababaian/bioSyntax) and look under 'issues' for development instructions.
+If you like bioSyntax and would like to help, check the open [bioSyntax Issues](https://github.com/ababaian/bioSyntax/issues) and see if you can solve them. Problems tagged <span style="color: green">`help`</span> are often a good place to start with.
 
-If you're really keen, check out the [TODO](https://github.com/ababaian/bioSyntax/issues) for ways to help develop bioSyntax.
+# Support 
 
-[ under construction ]
-- How To Instructions for each program  (take from issues)
-- Other ways to contribute...
+## Report a bug / Ask a question
+
+The fastest way to get an answer is to:
+
+1) Open a new issue on the [Repo](https://github.com/ababaian/bioSyntax/issues). Please include:
+
+- A detailed and descriptive title.
+- Enough information about what did for someone else to replicate the problem.
+- Information about the operating system / software you're using (`uname -a`)
+- If it's a syntax highlighting issue: a screenshot of the error and a small bit of the input file you used.
+
+2) If you really don't want to make a (fake) github account. Email [info@bioSyntax.org](mailto:info@bioSyntax.org) and we'll open the issue, but it will be slower.
 

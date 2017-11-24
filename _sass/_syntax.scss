@@ -11,7 +11,7 @@ figure.highlight {
   line-height: 1.5;
   border: 1px solid darken($body-color, 5);
   border-radius: 3px;
-  background-color: #272822;
+  background-color: $code-background;
 
   .highlight {
     margin: 0;
