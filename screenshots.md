@@ -7,8 +7,6 @@ image:
   background: eshcer_gray.png
 ---
 
-# Screenshots
-
 ### .sam / .bam
 
 `less`
