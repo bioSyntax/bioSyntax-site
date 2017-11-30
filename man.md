@@ -61,6 +61,11 @@ gzip -dc hg38.fa.gz | fa-less
 
 ##### Bypassing bioSyntax (data in plain-text)
 
+For **vim**
+Type `:syntax off` in vim
+
+For **less**
+
 ```
 # You may want to view your data without syntax highlighting
 # such as where a file is improperly formatted or very large
@@ -125,29 +130,30 @@ File format and software compatibility matrix for bioSyntax.
 | File Format | Description                 | sublime | vim | gedit | less |
 |:------------|:----------------------------|:-------:|:---:|:-----:|:----:|
 | .fasta      | Generic nt/aa sequence      |    X    |  X  |   X   |   X  |
-| .fastq      | Fasta + PHRED quality       |    X    |  -  |   -   |   X  |
-| .clustal    | Multiple Sequence Alignment |    X    |  o  |   X   |   X  |
-| .bed        | Genomic Ranges              |    X    |  o  |   X   |   X  |
-| .gtf        | Genomic Annotation          |    X    |  o  |   o   |   X  |
-| .pdb        | Protein Structure           |    X    |  X  |   o   |   -  |
-| .vcf        | Variant Call Format         |    o    |  o  |   o   |   X  |
-| .sam        | NGS Sequence Data           |    X    |  -  |   o   |   X  |
+| .fastq      | Fasta + PHRED quality       |    X    |  X  |   X   |   X  |
+| .clustal    | Multiple Sequence Alignment |    X    |  X  |   X   |   X  |
+| .bed        | Genomic Ranges              |    X    |  X  |   X   |   X  |
+| .gtf        | Genomic Annotation          |    X    |  X  |   X   |   X  |
+| .pdb        | Protein Structure           |    X    |  X  |   o   |   X  |
+| .vcf        | Variant Call Format         |    X    |  X  |   o   |   X  |
+| .sam        | NGS Sequence Data           |    X    |  o  |   o   |   X  |
 
 ## Auxillary Syntaxes
 
-| File Format | Description                 | sublime | vim | Gedit | less |
+| File Format | Description                 | sublime | vim | gedit | less |
 |-------------|-----------------------------|:-------:|:---:|:-----:|:----:|
 | .fasta      | fasta alternative AA colors |         |     |       |      |
-| -           | Clustal                     |    X    |  o  |   X   | -    |
-| -           | Taylor                      |    X    |  o  |   X   | -    |
-| -           | Zappo                       |    X    |  o  |   X   | -    |
-| -           | Hydrophobicity              |    X    |  o  |   X   | -    |
+| -           | Clustal                     |    X    |  -  |   X   | -    |
+| -           | Taylor                      |    X    |  -  |   X   | -    |
+| -           | Zappo                       |    X    |  -  |   X   | -    |
+| -           | Hydrophobicity              |    X    |  -  |   X   | -    |
 | .fai        | Fasta Index (faidx)         |    X    |  X  |   X   | X    |
 | .flagstat   | samtools flag summary       |    X    |  -  |   X   | X    |
+| .wig        | Wiggle data                 |    o    |  -  |   X   | -    |
 | .newick     | Tree Format                 |    -    |  -  |   -   | -    |
 | .pdbx       | Protein Structure (large)   |    -    |  -  |   -   | -    |
 | .phylip     | Multiple Sequence Alignment |    -    |  -  |   -   | -    |
-| .wig        | Wiggle data                 |    o    |  -  |   X   | -    |
+| .cwl        | Common Workflow Language    |    -    |  -  |   -   | -    |
 
 
 # Collaborate

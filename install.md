@@ -15,7 +15,8 @@ We're working on an installer to make this easier, but if you can't wait here's 
 
 1. [sublime](#sublime)
 2. [gedit](#gedit)
-3. [less](#less)
+3. [vim](#vim)
+4. [less](#less)
 
 
 ## sublime
@@ -40,6 +41,7 @@ We're working on an installer to make this easier, but if you can't wait here's 
 ## gedit
 (Linux / Win)
 1. Download the respective `*.lang` files you're interested in
+
 2. Download the `bioKate.xml` style scheme
  
 3. Change permissions to all readonly
@@ -55,80 +57,125 @@ We're working on an installer to make this easier, but if you can't wait here's 
 	`Edit > Preferences > Font & Color > bioKate'`
 7.  You now have pretty formats!
 
+## vim
+(Linux / Mac / Win)
+
+1. Download the the [bioSyntax release](https://github.com/ababaian/bioSyntax/archive/master.zip)
+
+2. Make syntax highlighting folders within your home directory vim folder (`~/.vim`) if they don't exist
+
+	```
+	cd ~/.vim
+	mkdir -p syntax # ~/.vim/syntax
+	mkdir -p ftdetect # ~/.vim/ftdetect
+	```
+	{: .language-bash}
+
+3. Copy the bioSyntax files into your vim syntax folders
+
+	```
+	cp $bioSyntax_PATH/syntax/vim/syntax/*.vim ~/.vim/syntax/
+	cp $bioSyntax_PATH/syntax/vim/ftdetect/*.vim ~/.vim/ftdetect/
+	```
+	{: .language-bash}
+
+4. Enable syntax highlighting within your `~/.vimrc` file by including `syntax enable`:
+
+	```
+	echo "syntax enable" >> ~/.vimrc
+	```
+	{: .language-bash}
+
+5.  You now have pretty formats!
+
+
 ## less
 (Linux)
 
 ### Install `source-highlight` (Ubuntu)
 
-1) Install `source-highlight` to your system:
-```
-sudo apt-get update
-sudo apt-get install source-highlight
-```
-{: .language-bash}
-2) Append these lines to your `~/.bashrc` and/or `~/.zshrc` 
-```
-## Syntax highlighting in less
-## For Ubuntu / Fedora
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=" -R "
+1. Install `source-highlight` to your system:
 
-alias less='less -NSi -# 10'
-alias more='less'
-
-# Explicit fasta / sam less call for piping
-# i.e:   samtools view -h aligned_hits.bam | sam-less
-#
-alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fa.style | less'
-alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
-alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
-```
-{: .language-bash}
-
-**Note**: On different systems the `/usr/share/source-highlight/src-hilite-lesspipe.sh` may be installed to a different directory. (i.e CentOS: `export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"`)
+	```
+	sudo apt-get update
+	sudo apt-get install source-highlight
+	```
+	{: .language-bash}
 
 ### Installing `bioSyntax` for less (Ubuntu)
 
-1) Update the `src-hilite-lesspipe.sh` script in the source-highlight directory.
+1. Download the the [bioSyntax release](https://github.com/ababaian/bioSyntax/archive/master.zip)
 
-```
-# source-highlight directory on your system
-SRCDIR='/usr/share/source-highlight'
+2. Update the `src-hilite-lesspipe.sh` script in the source-highlight directory.
 
-cd  $bioSyntax_PATH/syntax/less/
+	```
+	# source-highlight directory on your system
+	SRCDIR='/usr/share/source-highlight'
 
-sudo cp src-hilite-lesspipe_BIO.sh $SRCDIR/src-hilite-lesspipe.sh
-```
-{: .language-bash}
+	cd  $bioSyntax_PATH/syntax/less/
 
-2) Copy over the `*.lang`, `.outlang` and `.syntax` files to the source-highlight directory.
+	sudo cp src-hilite-lesspipe_BIO.sh $SRCDIR/src-hilite-lesspipe.sh
+	```
+	{: .language-bash}
 
-```
-#!/bin/bash
-# quickInstall.sh
-# Quick installer for less syntax
-# for testing purposes
+	**Note**: On different systems the `/usr/share/source-highlight/src-hilite-lesspipe.sh` may be installed to a different directory. (i.e CentOS: `export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"`)
 
-SRCDIR='/usr/share/source-highlight'
+3. Copy over the `*.lang`, `*.outlang` and `*.syntax` files to the source-highlight directory.
 
-# Copy over src-hilite script
-sudo cp src-hilite-lesspipe_BIO.sh $SRCDIR/src-hilite-lesspipe.sh
+	```
+	cd  $bioSyntax_PATH/syntax/less/
+
+	# Copy over language files
+	sudo cp *.lang $SRCDIR/
+
+	# Copy over style files
+	sudo cp *.style $SRCDIR/
+
+	# Copy over output-language files
+	sudo cp *.outlang $SRCDIR/
+	```
+	{: .language-bash}
+
+4. Append these lines (`$bioSyntax_PATH/syntax/less/rc_append.txt`) lines to your `~/.bashrc` and/or `~/.zshrc` 
 
 
-# Copy over language files
-sudo cp fasta.lang $SRCDIR/
-sudo cp sam.lang $SRCDIR/
-sudo cp vcf.lang $SRCDIR/
+	```
+	cd  $bioSyntax_PATH/syntax/less/
+	cat rc_append.txt >> ~/.bashrc
+	```
+	{: .language-bash}
+	or
+	```
+	## Append this to your ~/.zshrc & ~/.bashrc
+	##
+	## Syntax Highlighting for less
+	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+	export LESS=" -R "
 
-# Copy over syle files
-sudo cp fasta.style $SRCDIR/
-sudo cp sam.style $SRCDIR/
-sudo cp vcf.style $SRCDIR/
+	alias less='less -NSi -# 10'
+	# -N: add line numbers
+	# -S: don't wrap lines (force to single line)
+	# -# 10: Horizontal scroll distance
 
-# Copy over language files
-sudo cp bioSyntax.outlang $SRCDIR/
-sudo cp bioSyntax-vcf.outlang $SRCDIR/
-```
-{: .language-bash}
+	alias more='less'
 
-3) Restart your computer for the `rc` file to update in your terminal.
+	# Explicit call of  <file format>-less for piping data
+	# i.e:  samtools view -h aligned_hits.bam | sam-less
+	# Core syntaxes (default)
+	alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+	alias fq-less='source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+	alias clustal-less='source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+	alias bed-less='source-highlight -f esc --lang-def=bed.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+	alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+	alias gtf-less='source-highlight -f esc --lang-def=gtf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
+	alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
+
+	# Auxillary syntaxes (uncomment to activate)
+	#alias fai-less='source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+	#alias flagstat-less='source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+	```
+	{: .language-bash}
+
+5. Restart your computer for the `rc` files to update.
+
+6. You now have pretty formats!
