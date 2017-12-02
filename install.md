@@ -2,7 +2,7 @@
 layout: page
 title: Installing bioSyntax
 image:
-  feature: abstract-5.jpg
+  feature: rna-banner.jpg
 comments: true
 modified: 2017-12-01
 ---
@@ -12,12 +12,10 @@ We're working on an installer to make this easier, but if you can't wait here's 
 
 <a href="https://github.com/ababaian/bioSyntax/archive/master.zip"><span class="btn btn-warning">Download bioSyntax</span></a>
 
-
 1. [sublime](#sublime)
 2. [gedit](#gedit)
 3. [vim](#vim)
 4. [less](#less)
-
 
 ## sublime
 (Linux / Mac / Win)

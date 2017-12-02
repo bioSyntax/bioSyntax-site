@@ -2,7 +2,7 @@
 layout: page
 title: bioSyntax Manual
 image:
-  feature: abstract-3.jpg
+  feature: 80s-banner.gif
 comments: true
 markdown: kramdown
 ---
