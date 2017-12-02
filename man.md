@@ -88,7 +88,7 @@ less snp_1000genomes.vcf
 
 bioSyntax implements a novel, full [IUPAC Nucleotide Code](https://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation) coloring. Ambiguous bases are represented by an ~additive color-mixing of the parent bases. For example, **T**hymine (blue) + **C**ytosine (red) are both p**Y**rimidines (magenta).
 
-<div style="text-align:center"><img src="../images/man/nt_IUPAC_ANSI_v0.2_web.png"></div>
+<div style="text-align:center"><img src="../images/man/nt_IUPAC_ANSI_v0.3_web.png"></div>
 
 An intuitive feature of the bioSyntax color scheme is that the 'GC-content' of a sequence can be quickly approximated by how warm (high GC, red-orange) or cool (low GC, blue-green) a sequence looks.
 
