@@ -2,9 +2,7 @@
 layout: page
 title: Screenshots
 image:
-  feature:
-image:
-  background: eshcer_gray.png
+  background: dna_tile.png
 ---
 
 ### .sam / .bam
@@ -22,7 +20,7 @@ image:
 [<img src="images/screens/vcf-less.png">](images/screens/vcf-less.png)
 
 
-#### .pdb
+### .pdb
 
 `sublime`
 
