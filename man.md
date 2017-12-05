@@ -136,7 +136,7 @@ File format and software compatibility matrix for bioSyntax.
 | .gtf        | Genomic Annotation          |    X    |  X  |   X   |   X  |
 | .pdb        | Protein Structure           |    X    |  X  |   o   |   X  |
 | .vcf        | Variant Call Format         |    X    |  X  |   o   |   X  |
-| .sam        | NGS Sequence Data           |    X    |  o  |   o   |   X  |
+| .sam        | NGS Sequence Data           |    X    |  X  |   o   |   X  |
 
 ## Auxillary Syntaxes
 
