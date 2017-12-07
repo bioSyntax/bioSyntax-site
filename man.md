@@ -155,39 +155,7 @@ File format and software compatibility matrix for bioSyntax.
 | .phylip     | Multiple Sequence Alignment |    -    |  -  |   -   | -    |
 | .cwl        | Common Workflow Language    |    -    |  -  |   -   | -    |
 
-
-# Collaborate
-
-bioSyntax is a community-oriented project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs. Once you create something helpful, chances are others will find it helpful too, so share :)
-
-## Developing bioSyntax for `.XYZ` file format
-
- If you work with a particular file format you'd like syntax highlighting for, develop the syntax files and we'll add them to the repository. It's surprisingly easy and we can help.
-
-1. Fork the bioSyntax Repo
-2. Read some of the developed syntax files to learn how they function.
-3. Develop the syntax files for your format
-4. Once you're happy with it, put in a "pull request" and we'll review the code and add it to the next release.
-
-You should include 3-4 small example data files (<100 kb) for testing. Widely used cases such as centralized databases or common software output are preferred.
-
-If you get stuck on a problem, open an [issue](https://github.com/ababaian/bioSyntax/issues) and someone might be able to offer a solution.
-
-Ideally, once you grok your file format to make a robust regex engine you'll be able to quickly port it for different software (**vim**, **less**, **gedit** and **sublime**).
-
-## Creating a custom theme / changing colors
-
-If you're particular about how you want everything to look. Feel free to tweak the theme files. If you develop a theme you think is exceptionally good then we'd be happy to see it. Follow the steps for developing a file format and put in a pull request to add it to bioSyntax. 
-
-## Porting bioSyntax to `$software_variable`
-
-The choice of text-editors we included is based on our own use. To port bioSyntax for another editor, first search the [bioSyntax Issues](https://github.com/ababaian/bioSyntax/issues) to see if someone else is working on it. If they are, help them out. If not, open an issue so others can collaborate and don't repeat your efforts. Otherwise follow the same steps as above to fork.
-
-Once the minimum set of *core syntaxes* are complete, submit the pull request to add your port to the repository.
-
-## Other ways to help
-
-If you like bioSyntax and would like to help, check the open [bioSyntax Issues](https://github.com/ababaian/bioSyntax/issues) and see if you can solve them. Problems tagged <span style="color: green">`help`</span> are often a good place to start with.
+If you'd like to add support for another file-format; check the [development](dev) page to get started.
 
 # Support 
 
@@ -204,3 +172,9 @@ The fastest way to get an answer is to:
 
 2) If you really don't want to make a (fake) github account. Email [info@bioSyntax.org](mailto:info@bioSyntax.org) and we'll open the issue, but it will be slower.
 
+
+# Collaborating on bioSyntax
+
+bioSyntax is a community-oriented project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs.
+
+Check out the [Development](dev) page to create syntax-highlighting for custom file-formats and for other ways to help out.
