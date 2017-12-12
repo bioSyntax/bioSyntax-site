@@ -37,8 +37,8 @@ bioSyntax is a community project for scientific syntax highlighting. We encourag
 
 If you work with a scientific file-format and would like to add syntax-highlighting to it, we'd like to help you develop it.
 
-1. Fork the bioSyntax repository.
-2. Search [bioSyntax Issues](LINK) for the file-format you're interested in.
+1. Fork the [bioSyntax repository](fork).
+2. Search [bioSyntax Issues](https://github.com/bioSyntax/bioSyntax/issues) for the file-format you're interested in.
 	- If it exists; Help develop it.
 	- If it doesn't exist; start an issue for that format.
 		a) Title:"FORMAT DEVELOPMENT: `<$file-format>`"
@@ -55,8 +55,8 @@ If you work with a scientific file-format and would like to add syntax-highlight
 
 The choice of text-editors we included is based on our own use. To port bioSyntax to another program or interface:
 
-1. Fork the bioSyntax repository.
-2. Search [bioSyntax Issues](LINK) for the software port you're interested in.
+1. Fork the [bioSyntax repository](fork).
+2. Search [bioSyntax Issues](https://github.com/bioSyntax/bioSyntax/issues) for the software port you're interested in.
 	- If it exists; Help develop.
 	- If it doesn't exist; start an issue for that port.
 		a) Title:"PORT: `<$software>`"
@@ -106,10 +106,15 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 
 # Development for `vim`
 
+[Under Construction]
+
 # Development for `gedit`
+
+[Under Construction]
 
 # Development for `sublime`
 
+[Under Construction]
 
 <div style="text-align:center">
 	<a href="drawHelix.sh"> <img src="./images/drawHelix.sh.gif" alt="drawHelix.sh"></a>

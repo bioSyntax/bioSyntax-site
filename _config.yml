@@ -17,7 +17,8 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         ababaian/bioSyntax
+  github:         bioSyntax/bioSyntax
+  version:        v0.1-alpha
   stackexchange:  
   linkedin:       
   instagram:      

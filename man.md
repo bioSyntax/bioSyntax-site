@@ -134,9 +134,9 @@ File format and software compatibility matrix for bioSyntax.
 | .clustal    | Multiple Sequence Alignment |    X    |  X  |   X   |   X  |
 | .bed        | Genomic Ranges              |    X    |  X  |   X   |   X  |
 | .gtf        | Genomic Annotation          |    X    |  X  |   X   |   X  |
-| .pdb        | Protein Structure           |    X    |  X  |   o   |   X  |
-| .vcf        | Variant Call Format         |    X    |  X  |   o   |   X  |
-| .sam        | NGS Sequence Data           |    X    |  X  |   o   |   X  |
+| .pdb        | Protein Structure           |    X    |  X  |   X   |   X  |
+| .vcf        | Variant Call Format         |    X    |  X  |   X   |   X  |
+| .sam        | NGS Sequence Data           |    X    |  X  |   X   |   X  |
 
 ## Auxillary Syntaxes
 
@@ -163,12 +163,16 @@ If you'd like to add support for another file-format; check the [development](de
 
 The fastest way to get an answer is to:
 
-1) Open a new issue on the [Repo](https://github.com/ababaian/bioSyntax/issues). Please include:
+1) Search / Open an issue on the bioSyntax Repo. 
 
+Please Include:
 - A detailed and descriptive title.
 - Enough information about what did for someone else to replicate the problem.
 - Information about the operating system / software you're using (`uname -a`)
 - If it's a syntax highlighting issue: a screenshot of the error and a small bit of the input file you used.
+
+<a href="https://github.com/bioSyntax/bioSyntax/issues">
+	<span class="btn btn-danger">Open an Issue</span></a>
 
 2) If you really don't want to make a (fake) github account. Email [info@bioSyntax.org](mailto:info@bioSyntax.org) and we'll open the issue, but it will be slower.
 
@@ -178,3 +182,6 @@ The fastest way to get an answer is to:
 bioSyntax is a community-oriented project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs.
 
 Check out the [Development](dev) page to create syntax-highlighting for custom file-formats and for other ways to help out.
+
+<a href="{{ site.url }}/dev">
+	<span class="btn btn-info">Collaborate!</span></a>
