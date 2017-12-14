@@ -110,14 +110,13 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 - [Introduction into syntax-higlighting with vim](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 - [Vim Syntax Language Manual](http://vimdoc.sourceforge.net/htmldoc/syntax.html)
 - [Writing a `theme` set for vim](http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/)
-- [Adapting l/d colour schemes](https://github.com/rakr/vim-one)
 
 ### Development
 
 1. Language Definition files are stored in `<language>.vim`, which should be placed in `~/.vim/syntax/` folder
 on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows systems (it might be needed to create the .vim (or vimfiles) directory and to create the syntax subdirectory).
 2. Enable syntax in `~/.vimrc`: `syntax enable`
-3. To make Vim recognize a desirebale file, a `<language>.vim` (the same name as your syntax file) should be placed in `~/.vim/ftdetect/` folder (`$HOME/vimfiles/ftdetect` for Windows). This file (unlike the one from `syntax` folder) should contain a single line to set the filetype on buffer read or creation: `au BufRead,BufNewFile *.stc set filetype=<language>`
+3. To make Vim recognize a desirable file, a `<language>.vim` (the same name as your syntax file) should be placed in `~/.vim/ftdetect/` folder (`$HOME/vimfiles/ftdetect` for Windows). This file (unlike the one from `syntax` folder) should contain a single line to set the filetype on buffer read or creation: `au BufRead,BufNewFile *.stc set filetype=<language>`
 4. The created theme file (`<theme>.vim`) should be placed in `~/.vim/colors/` folder (`$HOME/vimfiles/colors` for Windows).
 
 # Development for `gedit`
@@ -126,7 +125,23 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 
 # Development for `sublime`
 
-[Under Construction]
+### Resources
+- [YAML syntax highlighting](http://www.sublimetext.com/docs/3/syntax.html)
+- [Syntax Definitions](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html)
+- [Sublime color scheme](https://forum.sublimetext.com/t/json-syntax-highlighting-does-not-work/7023/6)
+
+### Development
+
+1. To start an example file for a new format: in Sublime > Tools > Developer > New Syntax. The extension of this file should be `.sublime-syntax`.
+2. The `.sublime-syntax` file cannot contain any Tabs; everything is space-indented.
+3. The '.sublime-syntax' file should be placed in:
+Linux: `~/.config/sublime-text-3/Packages/User`
+Windows: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
+Mac: `~/Library/Application Support/Sublime Text 3/Packages/User/`
+4. The created theme file (`<theme>.sublime-package`) should be placed in:
+Linux:
+Windows:
+Mac:
 
 <div style="text-align:center">
 	<a href="drawHelix.sh"> <img src="./images/drawHelix.sh.gif" alt="drawHelix.sh"></a>
