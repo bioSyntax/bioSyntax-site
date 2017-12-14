@@ -106,7 +106,19 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 
 # Development for `vim`
 
-[Under Construction]
+### Resources
+- [Introduction into syntax-higlighting with vim](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [Vim Syntax Language Manual](http://vimdoc.sourceforge.net/htmldoc/syntax.html)
+- [Writing a `theme` set for vim](http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/)
+- [Adapting l/d colour schemes](https://github.com/rakr/vim-one)
+
+### Development
+
+1. Language Definition files are stored in `<language>.vim`, which should be placed in `~/.vim/syntax/` folder
+on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows systems (it might be needed to create the .vim (or vimfiles) directory and to create the syntax subdirectory).
+2. Enable syntax in `~/.vimrc`: `syntax enable`
+3. To make Vim recognize a desirebale file, a `<language>.vim` (the same name as your syntax file) should be placed in `~/.vim/ftdetect/` folder (`$HOME/vimfiles/ftdetect` for Windows). This file (unlike the one from `syntax` folder) should contain a single line to set the filetype on buffer read or creation: `au BufRead,BufNewFile *.stc set filetype=<language>`
+4. The created theme file (`<theme>.vim`) should be placed in `~/.vim/colors/` folder (`$HOME/vimfiles/colors` for Windows).
 
 # Development for `gedit`
 
