@@ -124,6 +124,7 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 ### Resources
 - [Language Definition v2.0 Tutorial](https://developer.gnome.org/gtksourceview/stable/lang-tutorial.html)
 - [Language Definition v2.0 Reference](https://developer.gnome.org/gtksourceview/stable/lang-reference.html)
+- [Style Scheme Definition Reference](https://developer.gnome.org/gtksourceview/stable/style-reference.html)
 
 ### Development
 
