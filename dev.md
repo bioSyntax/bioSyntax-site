@@ -105,13 +105,24 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 1. Language Definition files are stored in `$SOURCE_HIGHLIGHT_PATH/<language>.lang`
 2. Every `<language>.lang` file has an associated `<language>.style` file which assigns the regex variable in `.lang` to color variables in `.outlang`.
 3. The main color-theme files are either; `biosyntax.outlang` or `biosyntax-vcf.outlang`. This is the only place where colors are set.
-4. Automatic file-extension recognition for less is performed by the `src-hilite-lesspipe.sh` script.
+4. Automatic file-extension recognition for less is performed by the `$BIOSYNTAX/less/src-hilite-lesspipe.sh` script. You'll have to add explicit support for a new format.
+	
+	```
+	*.fasta|*.fa|*.mfa)
+	source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
+	```
+	{: .language-bash}
+
+
 5. To add pipe-capability in less; `alias` are defined in the users `.bashrc` or `.zshrc`. All bioSyntax aliases can be found in the `$BIOSYNTAX/less/rc_append.txt` file.
 
+	```
+	alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+	```
+	{: .language-bash}
+
 - To maximize compatibility; please limit color use to  Xterm 8-bit (256 colors)
-- On different systems the `src-hilite-lesspipe.sh` script is installed to a different directories. 
-	Ubuntu: `/usr/share/source-highlight/src-hilite-lesspipe.sh`
-	CentOS: `/usr/bin/src-hilite-lesspipe.sh`
+- There is currently a 17-color limit in **source-highlight** as imposed in [colors.h](https://www.gnu.org/software/src-highlite/api/colors_8h_source.html).
 
 # Development for `vim`
 
