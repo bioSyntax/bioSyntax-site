@@ -121,7 +121,14 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 
 # Development for `gedit`
 
-[Under Construction]
+### Resources
+- [Language Definition v2.0 Tutorial](https://developer.gnome.org/gtksourceview/stable/lang-tutorial.html)
+- [Language Definition v2.0 Reference](https://developer.gnome.org/gtksourceview/stable/lang-reference.html)
+
+### Development
+
+1. Any language definition file for gedit `<language>.lang` should be placed in the gtksourceview language spec folder `/gtksourceview-3.0/language-specs/<language>.lang`
+2. A theme file '<theme>.xml' should be placed in the gtksoureview style folder `/gtksourceview-3.0/styles/<theme>.xml`
 
 # Development for `sublime`
 
