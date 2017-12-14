@@ -8,9 +8,14 @@ modified: 2017-12-01
 ---
 # bioSyntax Installation
 
-We're working on an installer to make this easier, but if you can't wait here's how to get bioSyntax now.
+bioSyntax comes with a handy installation script. Simply download the latest release and run `bioSyntax_SETUP.sh`. 
 
-<a href="https://github.com/ababaian/bioSyntax/archive/master.zip"><span class="btn btn-warning">Download bioSyntax</span></a>
+<a href="{{ site.owner.release }}"><span class="btn btn-danger">Download bioSyntax</span></a>
+
+**Note**: The installation script requires being run as super-user at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below.
+
+
+# Manual Installation
 
 1. [sublime](#sublime)
 2. [gedit](#gedit)
