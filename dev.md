@@ -138,8 +138,8 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 - Linux: `~/.config/sublime-text-3/Packages/User`
 - Windows: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
 - Mac: `~/Library/Application Support/Sublime Text 3/Packages/User/`
-4. The language definiton file (`<language>.sublime-syntax`) defines colors as scopes, which are defined in a theme file (`<theme>.sublime-package')
-4. The created theme file (`<theme>.sublime-package`) should be placed in:
+4. The language definiton file (`<language>.sublime-syntax`) defines colors as scopes, which are defined in a theme file (`<theme>.sublime-package`)
+5. The created theme file (`<theme>.sublime-package`) should be placed in:
 - Linux:
 - Windows:
 - Mac:
