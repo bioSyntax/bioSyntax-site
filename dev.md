@@ -76,11 +76,20 @@ Looking for a side-project to work on? Take on one of the projects from the [bio
 
 # Useful Resources
 
+### Regular Expressions
+
 - [How to use Regular Expression](https://www.ugrad.cs.ubc.ca/%7Ecs121/2011W2/Labs/Lab8/lab8.html)
 - [Regex Cheatsheet](http://www.rexegg.com/regex-quickstart.html)
 - [Ruby Regex Tester](http://rubular.com/)
 - [Optimizing Regex](http://www.rexegg.com/regex-optimizations.html)
 - [Selecting columns with Regex](https://github.com/ababaian/bioSyntax/issues/17)
+
+### File Specification Files
+- [SAM v1.5](https://samtools.github.io/hts-specs/SAMv1.pdf)
+- [VCF v4.2](https://samtools.github.io/hts-specs/VCFv4.2.pdf)
+- [PDB v3.30](ftp://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf)
+- [UCSC Format Spec.](https://genome.ucsc.edu/FAQ/FAQformat.html)
+- [GTF v2.2](http://mblab.wustl.edu/GTF22.html)
 
 # Syntax Development for `less`
 
@@ -106,37 +115,70 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 
 # Development for `vim`
 
+**vim** natively supports syntax highlighting.
+
 ### Resources
-- [Introduction into syntax-higlighting with vim](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
-- [Vim Syntax Language Manual](http://vimdoc.sourceforge.net/htmldoc/syntax.html)
+- [Syntax-higlighting in vim](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [Syntax Language Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html)
 - [Writing a `theme` set for vim](http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/)
 
 ### Development
 
-1. Language Definition files are stored in `<language>.vim`, which should be placed in `~/.vim/syntax/` folder
-on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows systems (it might be needed to create the .vim (or vimfiles) directory and to create the syntax subdirectory).
-2. Enable syntax in `~/.vimrc`: `syntax enable`
-3. To make Vim recognize a desirable file, a `<language>.vim` (the same name as your syntax file) should be placed in `~/.vim/ftdetect/` folder (`$HOME/vimfiles/ftdetect` for Windows). This file (unlike the one from `syntax` folder) should contain a single line to set the filetype on buffer read or creation: `au BufRead,BufNewFile *.stc set filetype=<language>`
-4. The created theme file (`<theme>.vim`) should be placed in `~/.vim/colors/` folder (`$HOME/vimfiles/colors` for Windows).
+1. Language Definition files are stored in `<language>.vim` in your vim-syntax folder.
+	- Linux/MacOS: `~/.vim/syntax/` folder
+	- Windows: `$HOME/vimfiles/syntax/<language>.vim`
+
+2. Ensure Syntax Highlighting is enabled: add `syntax enable` to your `~/.vimrc` file.
+3. To make **vim** recognize a file-extension, a `<language>.vim` (the same name as your syntax file) should be placed in `~/.vim/ftdetect/` folder (win:`$HOME/vimfiles/ftdetect`). This file contains a single line to set the filetype on buffer read.
+	
+	```
+	au BufRead,BufNewFile *.stc set filetype=<language>
+	```
+	{: .language-bash}
+
+4. bioSyntax uses a custom theme file which is stored in `~/.vim/colors/bioSyntax.vim`. All Language Definition files must refer or link to colour-variables defined in this theme file.
+	
+	```
+	# 'ntA' is defined in ~/.vim/colors/bioSyntax.vim
+	syntax match ntA "[Aa]"
+
+	# To assign 'ntT' colours to a new variable 'ntI',
+	# Define the match then
+	syntax match ntI "[Ii]"
+
+	# Link the new variable to the pre-defined color variable
+	highlight link ntI ntT
+
+	```
+	{: .language-bash}
+
 
 # Development for `gedit`
 
+**gedit** supports syntax highlighting through the **gtksourceview** library. 
+
 ### Resources
+- [gtksoureview page](https://wiki.gnome.org/Projects/GtkSourceView)
 - [Language Definition v2.0 Tutorial](https://developer.gnome.org/gtksourceview/stable/lang-tutorial.html)
 - [Language Definition v2.0 Reference](https://developer.gnome.org/gtksourceview/stable/lang-reference.html)
 - [Style Scheme Definition Reference](https://developer.gnome.org/gtksourceview/stable/style-reference.html)
 
 ### Development
 
-1. Any language definition file for gedit `<language>.lang` should be placed in the gtksourceview language spec folder `/gtksourceview-3.0/language-specs/<language>.lang`
-2. A theme file '<theme>.xml' should be placed in the gtksoureview style folder `/gtksourceview-3.0/styles/<theme>.xml`
+1. Any Language Definition file for gedit `<language>.lang` should be placed in the gtksourceview language folder
+	- Linux: `/usr/share/gtksourceview-3.0/language-specs/<language>.lang`
+2. The bioSyntax theme file `bioSyntax.xml` is in the gtksoureview style folder 
+	- Linux: `/usr/share/gtksourceview-3.0/styles/bioSyntax.xml`
+3. In the header for `bioSyntax.xml`, it will import the parent style `kate.xml`. This can be modified.
 
 # Development for `sublime`
 
+**sublime** has native support for syntax highlighting.
+
 ### Resources
-- [YAML syntax highlighting](http://www.sublimetext.com/docs/3/syntax.html)
-- [Syntax Definitions](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html)
-- [Sublime color scheme](https://forum.sublimetext.com/t/json-syntax-highlighting-does-not-work/7023/6)
+- [Syntax Defintion Documentaion](http://www.sublimetext.com/docs/3/syntax.html)
+- [Writing Syntax Definitions](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html)
+- [Sublime Color scheme](https://forum.sublimetext.com/t/json-syntax-highlighting-does-not-work/7023/6)
 
 ### Development
 
@@ -146,11 +188,12 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 - Linux: `~/.config/sublime-text-3/Packages/User`
 - Windows: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
 - Mac: `~/Library/Application Support/Sublime Text 3/Packages/User/`
-4. The language definiton file (`<language>.sublime-syntax`) defines colors as scopes, which are defined in a theme file (`<theme>.sublime-package`)
-5. The created theme file (`<theme>.sublime-package`) should be placed in:
-- Linux:
-- Windows:
-- Mac:
+4. The language definiton file refers to color definitions as scopes, which are defined in a theme file, `Color Scheme - bioSyntax.sublime-package` in
+- Linux: `/opt/sublime_text/Packages/`
+- Windows: `C:/Program Files/Sublime Text 3/Packages/`
+- Mac: `/Applications/Sublime Text.app/Contents/MacOS/Packages/`
+
+********************************************************
 
 <div style="text-align:center">
 	<a href="drawHelix.sh"> <img src="./images/drawHelix.sh.gif" alt="drawHelix.sh"></a>

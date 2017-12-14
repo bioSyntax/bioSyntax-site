@@ -8,11 +8,11 @@ modified: 2017-12-01
 ---
 # bioSyntax Installation
 
-bioSyntax comes with a handy installation script. Simply download the latest release and run `bioSyntax_SETUP.sh`. 
+bioSyntax comes with a handy installation script. Simply download the latest release and run `bash bioSyntax_SETUP.sh`.
 
 <a href="{{ site.owner.release }}"><span class="btn btn-danger">Download bioSyntax</span></a>
 
-**Note**: The installation script requires being run as super-user at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below.
+**Note**: The installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below.
 
 
 # Manual Installation
@@ -63,7 +63,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 ## vim
 (Linux / Mac / Win)
 
-1. Download the the [bioSyntax release](https://github.com/ababaian/bioSyntax/archive/master.zip)
+1. Download and unzip the the [bioSyntax release]({{ site.owner.release }})
 
 2. Make syntax highlighting folders within your home directory vim folder (`~/.vim`) if they don't exist
 
@@ -93,13 +93,14 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 
 
 ## less
-(Linux)
+(Linux, MacOS)
 
-### Install `source-highlight` (Ubuntu)
+### Install `source-highlight`
 
-1. Install `source-highlight` to your system:
+1. Install [**source-highlight**](https://www.gnu.org/software/src-highlite/) to your system:
 
 	```
+	# Linux
 	sudo apt-get update
 	sudo apt-get install source-highlight
 	```
@@ -107,7 +108,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 
 ### Installing `bioSyntax` for less (Ubuntu)
 
-1. Download the the [bioSyntax release](https://github.com/ababaian/bioSyntax/archive/master.zip)
+1. Download and unzip the [bioSyntax release]({{ site.owner.release }})
 
 2. Update the `src-hilite-lesspipe.sh` script in the source-highlight directory.
 
@@ -121,7 +122,12 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 	```
 	{: .language-bash}
 
-	**Note**: On different systems the `/usr/share/source-highlight/src-hilite-lesspipe.sh` may be installed to a different directory. (i.e CentOS: `export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"`)
+	**Note**: On different systems the `src-hilite-lesspipe.sh` is be installed to different directories.
+
+	- Ubuntu:`/usr/share/source-highlight/src-hilite-lesspipe.sh`
+	- CentOS:`/usr/bin/src-hilite-lesspipe.sh`
+	- MacOS:`/usr/local/bin/src-hilite-lesspipe.sh`
+
 
 3. Copy over the `*.lang`, `*.outlang` and `*.syntax` files to the source-highlight directory.
 
