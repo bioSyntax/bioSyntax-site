@@ -132,12 +132,13 @@ on Unix-based systems, or in `$HOME/vimfiles/syntax/<language>.vim` on Windows s
 
 ### Development
 
-1. To start an example file for a new format: in Sublime > Tools > Developer > New Syntax. The extension of this file should be `.sublime-syntax`.
-2. The `.sublime-syntax` file cannot contain any Tabs; everything is space-indented.
-3. The '.sublime-syntax' file should be placed in:
+1. To start an example file for a new format: in Sublime > Tools > Developer > New Syntax. The extension of this file should be `<language>.sublime-syntax`.
+2. The `<language>.sublime-syntax` file cannot contain any Tabs; everything is space-indented.
+3. The `<language>.sublime-syntax` file should be placed in:
 - Linux: `~/.config/sublime-text-3/Packages/User`
 - Windows: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
 - Mac: `~/Library/Application Support/Sublime Text 3/Packages/User/`
+4. The language definiton file (`<language>.sublime-syntax`) defines colors as scopes, which are defined in a theme file (`<theme>.sublime-package')
 4. The created theme file (`<theme>.sublime-package`) should be placed in:
 - Linux:
 - Windows:
