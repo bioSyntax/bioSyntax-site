@@ -152,6 +152,7 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 
 	`sudo chmod 755 <insert-path</src-hilite-lesspipe.sh`
 6. In the `/bioSyntax-<release>/less/` folder, append the appropriate `*_append.txt` file to the correct rc file based on the default shell you use.
+
 - **Linux**:
 
 	```
