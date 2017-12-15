@@ -49,6 +49,7 @@ Alternatively, You can also copy your desired `*.sublime-syntax` files from the 
 - **Mac**: `/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
 
 	`sudo cp /bioSyntax-<release>/*.sublime-syntax -d <insert-path>/bioSyntax/`
+
 You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-sublime.git) into the appropriate paths above.
 
 	`sudo git clone https://github.com/bioSyntax/bioSyntax-sublime.git <insert-path>/bioSyntax/`.
@@ -89,7 +90,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 		if [ ! -d ~/.vim/colors ]; then mkdir ~/.vim/colors; fi
 	```
 	{: .language-bash}
-
 3. Also run the following to enable automatic syntax highlighting in vim:
 
 	```
@@ -97,7 +97,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 		if ! grep -q ":syntax enable" ~/.vimrc; then echo ":syntax enable\\n" > ~/.vimrc; fi
 	```
 	{: .language-bash}
-
 4. Copy your desired vim syntax, auto-detection, and colour files into their respective vim folders:
 
 	```
@@ -106,7 +105,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	cp /bioSyntax-<release>/vim/colors/bioSyntax.vim ~/.vim/colors/
 	```
 	{: .language-bash}
-
 5. Restart vim and you now have pretty formats!
 
 
@@ -126,7 +124,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
-
 1. Install [**source-highlight**](https://www.gnu.org/software/src-highlite/) to your system:
 - **Linux**: `sudo apt-get install source-highlight`
 - **Mac**: (The following installs source-highlight if it isn't installed; updates it otherwise)
@@ -139,7 +136,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
-
 2. Unzip the downloaded bioSyntax release to your root.
 3. In the `/bioSyntax-<release>/less/` folder, copy the `biosyntax.outlang` and `biosyntax-vcf.outlang` fies to the appropriate folder:
 - **Ubuntu**: `/usr/share/source-highlight/`
@@ -174,7 +170,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
-
 - **Mac**:
 
 	```
@@ -183,7 +178,6 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
-
 7. Copy your desired less `*.style` and `*.lang` files to the paths as above:
 
 	```
@@ -191,5 +185,4 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	cp /bioSyntax-<release>/less/*.lang <insert-path>
 	```
 	{: .language-bash}
-
 8. Restart your computer for your rc files to update, open less and you now have pretty formats!
