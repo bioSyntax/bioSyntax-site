@@ -8,183 +8,185 @@ modified: 2017-12-01
 ---
 # bioSyntax Installation
 
-bioSyntax comes with a handy installation script. Simply download the latest release and run `bash bioSyntax_SETUP.sh`.
+bioSyntax comes with a handy installation script. Simply download the latest release and run `bash bioSyntax_SETUP.sh <editor-of-choice>`.
 
 <a href="{{ site.owner.release }}"><span class="btn btn-danger">Download bioSyntax</span></a>
 
-**Note**: The installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below.
+**Note**: The installation script should be run from root and requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
 
 
 # Manual Installation
 
+
+0. First download the latest bioSyntax release [zip](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.zip) or [tar](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.tar.gz) and follow the following instructions for your desired editor.
 1. [sublime](#sublime)
 2. [gedit](#gedit)
 3. [vim](#vim)
 4. [less](#less)
 
 ## sublime
-(Linux / Mac / Win)
+**(Linux / Mac / Win)**
 
 0. Install [Sublime Text](http://www.sublimetext.com/)
-1. Download the [bioMonokai Color Scheme](https://github.com/ababaian/bioSyntax/blob/master/dev/theme/sublime/Color%20Scheme%20-%20bioSyntax.sublime-package).
-2. Copy it to your Sublime Text application packages folder:
-- **Linux**: `../sublime_text_3/Packages/`
-- **Windows**: `C:/Program Files/Sublime Text 3/Packages/`
-- **Mac**: `/Applications/Sublime Text.app/Contents/MacOS/Packages/`
-3. Download the [bioSyntax sublime package](https://github.com/ababaian/bioSyntax/blob/master/syntax/bioSyntax_sublime_RELEASE.zip).
-4. Unzip the `*.sublime-syntax` files into the Sublime Text Packages folder:
+1. Unzip the downloaded bioSyntax release to your root.
+
+	`sudo unzip bioSyntax-<release>.<zip/tar.gz> -d <insert-path>/bioSyntax/`
+2. In the bioSyntax/sublime folder rename the `Color%20Scheme%20-%20bioSyntax.sublime-package` file to `Color Scheme - bioSyntax.sublime-package`.
+
+	`mv Color%20Scheme%20-%20bioSyntax.sublime-package Color\ Scheme\ -\ bioSyntax.sublime-package`
+3. Copy it to your Sublime Text application packages folder:
+- **Linux**: `/opt/sublime_text/Packages/`
+- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/bioSyntax/`
+- **Mac**: `/Applications/Sublime\ Text.app/Contents/MacOS/Packages/`
+
+	`sudo cp Color\ Scheme\ -\ bioSyntax.sublime-package <insert-path>`
+4. The easiest method to manually install the syntax definitions then is via Package Control.
+- Install [Package Control for Sublime](https://packagecontrol.io/installation).
+- Once installed, in Sublime, go to `Preferences > Package Control > Package Control: Install Package` and search for `BioSyntax`, and click on it. Package Control will install the syntax files for you. 
+Alternatively, You can also copy your desired `*.sublime-syntax` files from the `bioSyntax/sublime` folder into the Sublime Text Packages folder:
 - **Linux**: `~/.config/sublime-text-3/Packages/User/`
-- **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
-- **Mac**: `/Users/your_username/Library/Application Support/Sublime Text 3/Packages/`
-5. Open Sublime Text and go select the bioSyntax (bioMonokai) theme
+- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/`
+- **Mac**: `/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
+
+	`sudo cp /bioSyntax-<release>/*.sublime-syntax -d <insert-path>/bioSyntax/`
+
+You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-sublime.git) into the appropriate paths above.
+
+	`sudo git clone https://github.com/bioSyntax/bioSyntax-sublime.git <insert-path>/bioSyntax/`.
+5. Restart `Sublime` and go select the bioSyntax (bioMonokai) theme
 `Preferences > Color Scheme > bioMonokai`
 6. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
 7. You now have pretty formats!
 
 ## gedit
-(Linux / Win)
-1. Download the respective `*.lang` files you're interested in
+**(Linux / Win)**
 
-2. Download the `bioKate.xml` style scheme
- 
-3. Change permissions to all readonly
-	`chmod 0644 *.lang`
+0. Install [Gedit](https://wiki.gnome.org/Apps/Gedit).
+1. Unzip the downloaded bioSyntax release to your root.
+2. In the `/bioSyntax-<release>/gedit/` folder, copy the `bioSyntax.xml` style file to the appropriate gtksourceview style folder (depending on your version of Gedit):
+- **Linux**: `/usr/share/gtksourceview-3.0/styles/`
+- **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/styles/`
 
-4. Copy the `bioKate.xml` style scheme to gtksoureview style folder
-	`sudo cp bioKate.xml /usr/share/gtksourceview-3.0/styles/bioKate.xml`
+	`sudo cp /bioSyntax-<release>/gedit/bioSyntax.xml <insert-path>`
+3. Copy your desired `*.lang` file(s) to the appropriate gtksourceview language spec folder (also depends on version of Gedit):
+- **Linux**: `/usr/share/gtksourceview-3.0/language-specs/`
+- **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/language-specs/`
 
-5. Copy the `*.lang` file(s) to gtksourceview language spec folder
-	`sudo cp fasta.lang /usr/share/gtksourceview-3.0/language-specs/fasta.lang`
-
-6. Restart `gedit` and select the bioSyntax theme
-	`Edit > Preferences > Font & Color > bioKate'`
-7.  You now have pretty formats!
+	`sudo cp /bioSyntax-<release>/gedit/*.lang <insert-path>`
+4. Restart `gedit` and select the bioSyntax theme
+	`Edit > Preferences > Font & Color > bioSyntax'`
+5.  You now have pretty formats!
 
 ## vim
-(Linux / Mac / Win)
+**(Linux / Mac / Win)**
 
-1. Download and unzip the the [bioSyntax release]({{ site.owner.release }})
-
-2. Make syntax highlighting folders within your home directory vim folder (`~/.vim`) if they don't exist
-
-	```
-	cd ~/.vim
-	mkdir -p syntax # ~/.vim/syntax
-	mkdir -p ftdetect # ~/.vim/ftdetect
-	```
-	{: .language-bash}
-
-3. Copy the bioSyntax files into your vim syntax folders
+1. Unzip the downloaded bioSyntax release.
+2. Run the following commands in your command line to create syntax, auto-detection and colouring folders in your home directory (if they don't already exist):
 
 	```
-	cp $bioSyntax_PATH/syntax/vim/syntax/*.vim ~/.vim/syntax/
-	cp $bioSyntax_PATH/syntax/vim/ftdetect/*.vim ~/.vim/ftdetect/
+		if [ ! -d ~/.vim/ ]; then mkdir ~/.vim/; fi
+		if [ ! -d ~/.vim/syntax ]; then mkdir ~/.vim/syntax; fi
+		if [ ! -d ~/.vim/ftdetect ]; then mkdir ~/.vim/ftdetect; fi
+		if [ ! -d ~/.vim/colors ]; then mkdir ~/.vim/colors; fi
 	```
 	{: .language-bash}
-
-4. Enable syntax highlighting within your `~/.vimrc` file by including `syntax enable`:
+3. Also run the following to enable automatic syntax highlighting in vim:
 
 	```
-	echo "syntax enable" >> ~/.vimrc
+		if [ ! -e ~/.vimrc ]; then touch ~/.vimrc; fi
+		if ! grep -q ":syntax enable" ~/.vimrc; then echo ":syntax enable\\n" > ~/.vimrc; fi
 	```
 	{: .language-bash}
+4. Copy your desired vim syntax, auto-detection, and colour files into their respective vim folders:
 
-5.  You now have pretty formats!
+	```
+	cp /bioSyntax-<release>/vim/*.vim ~/.vim/syntax/
+	cp /bioSyntax-<release>/vim/ftdetect/*.vim ~/.vim/ftdetect/
+	cp /bioSyntax-<release>/vim/colors/bioSyntax.vim ~/.vim/colors/
+	```
+	{: .language-bash}
+5. Restart vim and you now have pretty formats!
 
 
 ## less
-(Linux, MacOS)
+**(Linux, Mac)**
 
-### Install `source-highlight`
+0. Ensure that your applications/packages are up-to-date:
+- **Linux**: `sudo apt-get update`
+- **Mac**: (Installing source-highlight is easiest via homebrew. The following updates brew if it is installed; installs it otherwise.)
 
+	```
+	which -s brew
+	if [[ $? != 0 ]] ; then
+    	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	else
+    	brew update
+	fi
+	```
+	{: .language-bash}
 1. Install [**source-highlight**](https://www.gnu.org/software/src-highlite/) to your system:
+- **Linux**: `sudo apt-get install source-highlight`
+- **Mac**: (The following installs source-highlight if it isn't installed; updates it otherwise)
 
 	```
-	# Linux
-	sudo apt-get update
-	sudo apt-get install source-highlight
+	if [[ ! -z `brew ls --versions "source-highlight"` ]]; then
+		brew upgrade source-highlight
+	else
+		brew install source-highlight
+	fi
+	```
+	{: .language-bash}
+2. Unzip the downloaded bioSyntax release to your root.
+3. In the `/bioSyntax-<release>/less/` folder, copy the `biosyntax.outlang` and `biosyntax-vcf.outlang` fies to the appropriate folder:
+- **Ubuntu**: `/usr/share/source-highlight/`
+- **CentOS**: `/usr/bin/`
+- **Mac**: `/usr/local/Cellar/source-highlight/3.1.8_7/share/source-highlight/`
+
+	`sudo cp /bioSyntax-<release>/less/biosyntax.outlang <insert-path>`
+
+	`sudo cp /bioSyntax-<release>/less/biosyntax-vcf.outlang <insert-path>`
+4. In the `/bioSyntax-<release>/less/` folder, copy the `src-hilite-lesspipe_BIO.sh` file to the appropriate folder as above and rename it to `src-hilite-lesspipe.sh`:
+
+	`sudo cp /bioSyntax-<release>/less/src-hilite-lesspipe_BIO.sh <insert-path>/src-hilite-lesspipe.sh`
+5. In the folder that you moved the above file to, modify it to make it executable.
+
+	`sudo chmod 755 <insert-path</src-hilite-lesspipe.sh`
+
+6. In the `/bioSyntax-<release>/less/` folder, append the appropriate `*_append.txt` file to the correct rc file based on the default shell you use.
+- **Linux**:
+
+	```
+	if [ `echo $SHELL` == "/bin/bash" ]; then
+		if ! grep -q "bioSyntax" ~/.bashrc; then
+			sudo cat /bioSyntax-<release>/less/rc_append.txt >> ~/.bashrc;
+		fi
+	elif [ `echo $SHELL` == "/bin/zsh" ]; then
+		if ! grep -q "bioSyntax" ~/.zshrc; then
+			sudo cat /bioSyntax-<release>/less/rc_append.txt >> ~/.zshrc;
+		fi
+	else
+		if ! grep -q "bioSyntax" ~/.profile; then
+			sudo cat /bioSyntax-<release>/less/rc_append.txt >> ~/.profile;
+		fi
+	fi
 	```
 	{: .language-bash}
 
-### Installing `bioSyntax` for less (Ubuntu)
-
-1. Download and unzip the [bioSyntax release]({{ site.owner.release }})
-
-2. Update the `src-hilite-lesspipe.sh` script in the source-highlight directory.
+- **Mac**:
 
 	```
-	# source-highlight directory on your system
-	SRCDIR='/usr/share/source-highlight'
-
-	cd  $bioSyntax_PATH/syntax/less/
-
-	sudo cp src-hilite-lesspipe_BIO.sh $SRCDIR/src-hilite-lesspipe.sh
+	if ! grep -q "bioSyntax" ~/.bash_profile; then
+			sudo cat /bioSyntax/less/bp_append.txt >> ~/.bash_profile;
+	fi
 	```
 	{: .language-bash}
 
-	**Note**: On different systems the `src-hilite-lesspipe.sh` is be installed to different directories.
-
-	- Ubuntu:`/usr/share/source-highlight/src-hilite-lesspipe.sh`
-	- CentOS:`/usr/bin/src-hilite-lesspipe.sh`
-	- MacOS:`/usr/local/bin/src-hilite-lesspipe.sh`
-
-
-3. Copy over the `*.lang`, `*.outlang` and `*.syntax` files to the source-highlight directory.
+7. Copy your desired less `*.style` and `*.lang` files to the paths as above:
 
 	```
-	cd  $bioSyntax_PATH/syntax/less/
-
-	# Copy over language files
-	sudo cp *.lang $SRCDIR/
-
-	# Copy over style files
-	sudo cp *.style $SRCDIR/
-
-	# Copy over output-language files
-	sudo cp *.outlang $SRCDIR/
+	cp /bioSyntax-<release>/less/*.style <insert-path>
+	cp /bioSyntax-<release>/less/*.lang <insert-path>
 	```
 	{: .language-bash}
 
-4. Append these lines (`$bioSyntax_PATH/syntax/less/rc_append.txt`) lines to your `~/.bashrc` and/or `~/.zshrc` 
-
-
-	```
-	cd  $bioSyntax_PATH/syntax/less/
-	cat rc_append.txt >> ~/.bashrc
-	```
-	{: .language-bash}
-	or
-	```
-	## Append this to your ~/.zshrc & ~/.bashrc
-	##
-	## Syntax Highlighting for less
-	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-	export LESS=" -R "
-
-	alias less='less -NSi -# 10'
-	# -N: add line numbers
-	# -S: don't wrap lines (force to single line)
-	# -# 10: Horizontal scroll distance
-
-	alias more='less'
-
-	# Explicit call of  <file format>-less for piping data
-	# i.e:  samtools view -h aligned_hits.bam | sam-less
-	# Core syntaxes (default)
-	alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
-	alias fq-less='source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
-	alias clustal-less='source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
-	alias bed-less='source-highlight -f esc --lang-def=bed.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
-	alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
-	alias gtf-less='source-highlight -f esc --lang-def=gtf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
-	alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
-
-	# Auxillary syntaxes (uncomment to activate)
-	#alias fai-less='source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
-	#alias flagstat-less='source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
-	```
-	{: .language-bash}
-
-5. Restart your computer for the `rc` files to update.
-
-6. You now have pretty formats!
+8. Restart your computer for your rc files to update, open less and you now have pretty formats!
