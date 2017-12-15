@@ -179,6 +179,7 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
+
 7. Copy your desired less `*.style` and `*.lang` files to the paths as above:
 
 	```
@@ -186,4 +187,5 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	cp /bioSyntax-<release>/less/*.lang <insert-path>
 	```
 	{: .language-bash}
+
 8. Restart your computer for your rc files to update, open less and you now have pretty formats!
