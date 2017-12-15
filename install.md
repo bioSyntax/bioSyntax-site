@@ -171,6 +171,7 @@ You can also clone [this repository](https://github.com/bioSyntax/bioSyntax-subl
 	fi
 	```
 	{: .language-bash}
+
 - **Mac**:
 
 	```
