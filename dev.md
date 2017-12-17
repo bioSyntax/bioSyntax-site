@@ -2,7 +2,7 @@
 layout: page
 title: Developing bioSyntax
 image:
-  feature: 80s-banner.gif
+  feature: tiredformatician.gif
 comments: true
 markdown: kramdown
 ---
