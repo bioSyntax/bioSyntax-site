@@ -3,6 +3,7 @@ layout: page
 title: Developing bioSyntax
 image:
   feature: tiredformatician.gif
+  credit: goldenboy
 comments: true
 markdown: kramdown
 ---

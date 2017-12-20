@@ -134,7 +134,7 @@ File format and software compatibility matrix for bioSyntax.
 | .clustal    | Multiple Sequence Alignment |    X    |  X  |   X   |   X  |
 | .bed        | Genomic Ranges              |    X    |  X  |   X   |   X  |
 | .gtf        | Genomic Annotation          |    X    |  X  |   X   |   X  |
-| .pdb        | Protein Structure           |    X    |  X  |   X   |   X  |
+| .pdb        | Protein Structure           |    X    |  X  |   o   |   X  |
 | .vcf        | Variant Call Format         |    X    |  X  |   X   |   X  |
 | .sam        | NGS Sequence Data           |    X    |  X  |   X   |   X  |
 
