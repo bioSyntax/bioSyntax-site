@@ -6,7 +6,12 @@ layout: post
 
 Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.gtf`, `.pdb`, & more formats.
 
-[<img src="http://biosyntax.org/images/sam-less-2.gif">](images/screens/sam-less.png)
+<div style="text-align:center">
+<script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
+</div>
+
+<!--[<img src="http://biosyntax.org/images/sam-less-2.gif">](images/screens/sam-less.png)
+-->
 
 ### Usage
 
