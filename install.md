@@ -4,30 +4,31 @@ title: Installing bioSyntax
 image:
   feature: rna-banner.jpg
 comments: true
-modified: 2017-12-01
+modified: 2017-12-22
 ---
 # bioSyntax Installation
 
+<a href="{{ site.owner.release }}"><span class="btn btn-danger">Download bioSyntax</span></a>
+
 bioSyntax comes with a handy installation script. Simply download the latest release and run:
 
-	```
-		bash bioSyntax_SETUP.sh <editor-of-choice>
-	```
-	{: .language-bash}
+```
+	bash bioSyntax_SETUP.sh <editor-of-choice>
 
-	'<editors> = vim || less || gedit || sublime'
+	# <editors> = vim || less || gedit || sublime
+```
+{: .language-bash}
 
-<a href="{{ site.owner.release }}"><span class="btn btn-danger">Download bioSyntax</span></a>
 
 **Note**: The installation script should be run from root and requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
 
 # Manual Installation
 
 
-0. First download the latest bioSyntax release [zip](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.zip) or [tar](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.tar.gz) and follow the following instructions for your desired editor.
+0. Download the latest [zip](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.zip) or [tar](https://github.com/bioSyntax/bioSyntax/releases/tag/v0.1-beta.tar.gz)
 1. [sublime](#sublime)
 2. [gedit](#gedit)
-3. [vim](#vim) (easiest installation)
+3. [vim](#vim)
 4. [less](#less)
 
 ## sublime
@@ -74,10 +75,10 @@ If not, follow the manual installation instructions below:
 
 Alternatively, you can clone [this repository](https://github.com/bioSyntax/bioSyntax-sublime.git) into the appropriate paths above.
 
-	```
-		git clone https://github.com/bioSyntax/bioSyntax-sublime.git <insert-path>/bioSyntax/
-	```
-	{: .language-bash}
+```
+	git clone https://github.com/bioSyntax/bioSyntax-sublime.git <insert-path>/bioSyntax/
+```
+{: .language-bash}
 
 5. Restart `Sublime` and go select the bioSyntax (bioMonokai) theme
 `Preferences > Color Scheme > bioMonokai`
@@ -262,120 +263,5 @@ Alternatively, you can clone [this repository](https://github.com/bioSyntax/bioS
 
 8. Restart your computer for your rc files to update, open less and you now have pretty formats!
 
-# Uninstall BioSyntax
 
-bioSyntax also comes with an uninstaller script in the release. To use it, run:
-
-	```
-		bash bioSyntax_UNINSTALL.sh <editor-of-choice>
-	```
-	{: .language-bash}
-
-and then delete the release.
-
-**Note**: The uninstaller script should also be run from root and requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Uninstallation instructions below, but some files will need to be placed in paths accessed via root as well.
-
-## sublime
-**(Linux / Mac / Win)**
-
-Remove the bioSyntax Color Scheme, `Color Scheme - bioSyntax.sublime-package` from your Sublime Text application packages folder:
-- **Linux**: `/opt/sublime_text/Packages/`
-- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/bioSyntax/`
-- **Mac**: `/Applications/Sublime\ Text.app/Contents/MacOS/Packages/`. 
-
-	```
-		sudo rm <insert-path>/Color\ Scheme\ -\ bioSyntax.sublime-package
-	```
-	{: .language-bash}
-
-2. Remove any `*.sublime-syntax` files you no longer want from the Sublime Text Packages folder
-- **Linux**: `~/.config/sublime-text-3/Packages/User/`
-- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/`
-- **Mac**: `/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
-
-	```
-		rm <insert-path>/<filetype>.sublime-syntax
-	```
-	{: .language-bash}
-
-## gedit
-**(Linux / Win)**
-
-1. Remove the bioSyntax style file, `bioSyntax.xml` from the appropriate gtksourceview style folder (depending on your version of Gedit):
-- **Linux**: `/usr/share/gtksourceview-3.0/styles/`
-- **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/styles/`
-
-	```
-		sudo rm <insert-path>/bioSyntax.xml
-	```
-	{: .language-bash}
-
-2. Remove any `*.lang` file(s) you no longer want from the appropriate gtksourceview language specs folder (also depends on version of Gedit):
-- **Linux**: `/usr/share/gtksourceview-3.0/language-specs/`
-- **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/language-specs/`
-
-	```
-		sudo rm <insert-path>/<filetype>.lang
-	```
-	{: .language-bash}
-
-## vim
-**(Linux / Mac / Win)**
-
-1. Remove the bioSyntax color file, `bioSyntax.vim` from your Vim colors folder:
-
-	```
-		rm ~/.vim/colors/bioSyntax.vim
-	```
-	{: .language-bash}
-
-2. Remove any syntax file(s) you no longer want from your Vim syntax folder:
-
-	```
-		rm ~/.vim/syntax/<filetype>.vim
-	```
-	{: .language-bash}
-
-3. Remove corresponding autodetec files from your Vim ftdetect folder:
-
-	```
-		rm ~/.vim/ftdetect/<filetype>.vim
-	```
-	{: .language-bash}
-
-## less
-**(Linux / Mac)**
-
-1. Remove the `biosyntax.outlang` and `biosyntax-vcf.outlang` files from your source-highlight folder:
-- **Ubuntu**: `/usr/share/source-highlight/`
-- **CentOS**: `/usr/bin/`
-- **Mac**: `/usr/local/opt/source-highlight/share/source-highlight/`
-
-	```
-		sudo rm <insert-path>/biosyntax.outlang
-		sudo rm <insert-path>/biosyntax-vcf.outlang
-	```
-	{: .language-bash}
-
-2. Remove the `*.style` and corresponding `*.lang` file(s) that you no longer want from the paths as above:
-
-	```
-		sudo rm <insert-path>/<filetype>.lang
-		sudo rm <insert-path>/<filetype>.style
-	```
-	{: .language-bash}
-
-3. If you wish to uninstall source-highlight for less as well, run the following:
-- **Linux**:
-
-	```
-		sudo apt-get remove source-highlight
-	```
-	{: .language-bash}
-
-- **Mac**:
-
-	```
-		brew uinstall source-highlight
-	```
-	{: .language-bash}
+#### [Uninstalling bioSyntax](uninstall)

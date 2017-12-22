@@ -177,6 +177,8 @@ Please Include:
 2) If you really don't want to make a (fake) github account. Email [info@bioSyntax.org](mailto:info@bioSyntax.org) and we'll open the issue, but it will be slower.
 
 
+### [Uninstallation Instructions](uninstall)
+
 # Collaborating on bioSyntax
 
 bioSyntax is a community-oriented project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs.
@@ -185,3 +187,5 @@ Check out the [Development](dev) page to create syntax-highlighting for custom f
 
 <a href="{{ site.url }}/dev">
 	<span class="btn btn-info">Collaborate!</span></a>
+
+# [See also: bioSyntax Manuscript](https://www.biorxiv.org/content/early/2017/12/20/235820)

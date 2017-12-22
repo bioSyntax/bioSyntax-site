@@ -32,3 +32,10 @@ image:
 
 [<img src="images/screens/pdb-sublime_1.png" height="25%" width="25%">](images/screens/pdb-sublime_1.png)
 [<img src="images/screens/pdb-sublime_2.png" height="25%" width="25%">](images/screens/pdb-sublime_2.png)
+
+### Demo
+
+bioSyntax running in a less-pipe for a bam file
+<div style="text-align:center">
+<script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
+</div>

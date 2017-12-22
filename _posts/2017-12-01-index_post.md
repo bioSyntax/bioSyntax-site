@@ -4,7 +4,7 @@ layout: post
 
 ## Syntax Highlighting for Computational Biology.
 
-Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.gtf`, `.pdb`, & more formats.
+Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, & more formats.
 
 <div style="text-align:center">
 <script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
@@ -21,12 +21,12 @@ bioSyntax integrates seamlessly with **vim**, **less**, **gedit**, & **sublime**
 
 To gain the most insight from your data, read our brief [bioSyntax Manual](man).
 
-### [INSTALL](install)
+### [INSTALL bioSyntax](install)
 
 ## Updates
 
 #### 2017-12-19 - bioSyntax v0.1-beta1 Release
 
-- Initial release for pre-print manuscript
+- Initial release for the [pre-print manuscript](https://www.biorxiv.org/content/early/2017/12/20/235820)
 - Syntax highlighting for FASTA, FASTQ, BED, GTF, PDB, SAM & VCF
 - Ported to gedit, sublime, vim and less
