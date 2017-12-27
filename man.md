@@ -134,7 +134,7 @@ File format and software compatibility matrix for bioSyntax.
 | .clustal    | Multiple Sequence Alignment |    X    |  X  |   X   |   X  |
 | .bed        | Genomic Ranges              |    X    |  X  |   X   |   X  |
 | .gtf        | Genomic Annotation          |    X    |  X  |   X   |   X  |
-| .pdb        | Protein Structure           |    X    |  X  |   o   |   X  |
+| .pdb        | Protein Structure           |    X    |  X  |   X   |   X  |
 | .vcf        | Variant Call Format         |    X    |  X  |   X   |   X  |
 | .sam        | NGS Sequence Data           |    X    |  X  |   X   |   X  |
 
@@ -148,7 +148,7 @@ File format and software compatibility matrix for bioSyntax.
 | -           | Zappo                       |    X    |  -  |   X   | -    |
 | -           | Hydrophobicity              |    X    |  -  |   X   | -    |
 | .fai        | Fasta Index (faidx)         |    X    |  X  |   X   | X    |
-| .flagstat   | samtools flag summary       |    X    |  -  |   X   | X    |
+| .flagstat   | samtools flag summary       |    X    |  X  |   X   | X    |
 | .wig        | Wiggle data                 |    o    |  -  |   X   | -    |
 | .newick     | Tree Format                 |    -    |  -  |   -   | -    |
 | .pdbx       | Protein Structure (large)   |    -    |  -  |   -   | -    |
