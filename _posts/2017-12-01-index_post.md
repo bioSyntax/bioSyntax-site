@@ -13,20 +13,26 @@ Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb
 <!--[<img src="http://biosyntax.org/images/sam-less-2.gif">](images/screens/sam-less.png)
 -->
 
+### [INSTALL bioSyntax](install)
+
 ### Usage
 
-bioSyntax integrates seamlessly with **vim**, **less**, **gedit**, & **sublime** to automatically recognize [your favorite biological file formats](man#supported-file-formats). Large data files can also be directly piped into **less** with `sam-less`, `vcf-less`, ..., `xyz-less` commands.
+bioSyntax integrates seamlessly with **vim**, **less**, **gedit**, & **sublime** to automatically recognize [your favorite biological file formats](man#supported-file-formats). To gain the most insight from your data, read our brief [bioSyntax Manual](man).
+
+Large data can also be directly piped into **less** with `sam-less`, `vcf-less`, ..., `xyz-less` commands.
 
 ![Example less command](images/sam-less_command.gif)
 
-To gain the most insight from your data, read our brief [bioSyntax Manual](man).
+&nbsp;
 
-### [INSTALL bioSyntax](install)
+We're actively developing bioSyntax; we'd love to hear your comments, feedback and suggestions for further development. [Drop us a line on github](https://github.com/bioSyntax/bioSyntax/issues) or [email](mailto:info@bioSyntax.org).
+
+------------------------------------------------------------------------------
 
 ## Updates
 
-#### 2017-12-19 - bioSyntax v0.1-beta1 Release
+#### 2017-12-19 - bioSyntax v0.1-beta Release
 
-- Initial release for the [pre-print manuscript](https://www.biorxiv.org/content/early/2017/12/20/235820)
+- [Pre-print manuscript](https://www.biorxiv.org/content/early/2017/12/20/235820) initial release
 - Syntax highlighting for FASTA, FASTQ, BED, GTF, PDB, SAM & VCF
 - Ported to gedit, sublime, vim and less
