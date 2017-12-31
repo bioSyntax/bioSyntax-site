@@ -117,11 +117,11 @@ If not, follow the manual installation instructions below:
 
 If you have [Pathogen](https://github.com/tpope/vim-pathogen) installed:
 
-	```
-	cd ~/.vim/bundle && \
-	git clone https://github.com/tpope/vim-sensible.git
-	```
-	{: .langauge-bash}
+```
+cd ~/.vim/bundle && \
+git clone https://github.com/tpope/vim-sensible.git
+```
+{: .langauge-bash}
 
 ### Manual instructions
 
