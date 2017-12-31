@@ -113,6 +113,17 @@ If not, follow the manual installation instructions below:
 ## vim
 **(Linux / Mac / Win)**
 
+### via Pathogen
+
+If you have [Pathogen](https://github.com/tpope/vim-pathogen) installed:
+
+	```
+	cd ~/.vim/bundle && \
+	git clone https://github.com/tpope/vim-sensible.git
+	```
+
+### Manual instructions
+
 1. Unzip the downloaded bioSyntax release.
 2. Find your **vim profile folder**, and make a `syntax`, `ftdetect`, and `colors` directories in it, if they don't exist.
 	- **Linux/Mac**: `~/.vim/`
