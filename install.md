@@ -119,7 +119,7 @@ If you have [Pathogen](https://github.com/tpope/vim-pathogen) installed:
 
 ```
 cd ~/.vim/bundle && \
-git clone https://github.com/tpope/vim-sensible.git
+git clone https://github.com/bioSyntax/bioSyntax-vim.git
 ```
 {: .langauge-bash}
 
