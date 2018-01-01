@@ -45,7 +45,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 
 	```
 	mv Color%20Scheme%20-%20bioSyntax.sublime-package \
-	   Color\ Scheme\ -\ bioSyntax.sublime-package
+	Color\ Scheme\ -\ bioSyntax.sublime-package
 	```
 	{: .language-bash}
 
@@ -70,6 +70,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 
 
 5. Restart **Sublime** and select the bioSyntax (bioMonokai) theme.
+
 	`Preferences > Color Scheme > bioMonokai`
 
 6. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
@@ -106,6 +107,7 @@ If not, follow the manual installation instructions below:
 	{: .language-bash}
 
 4. Restart `gedit` and select the bioSyntax theme
+
 	`Edit > Preferences > Font & Color > bioSyntax'`
 
 5.  You now have pretty formats!
@@ -118,7 +120,7 @@ If not, follow the manual installation instructions below:
 If you have [Pathogen](https://github.com/tpope/vim-pathogen) installed:
 
 ```
-cd ~/.vim/bundle && \
+cd ~/.vim/bundle &&
 git clone https://github.com/bioSyntax/bioSyntax-vim.git
 ```
 {: .langauge-bash}
@@ -167,9 +169,9 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	```
 	which -s brew
 	if [[ $? != 0 ]] ; then
-    	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	else
-    	brew update
+		brew update
 	fi
 	```
 	{: .language-bash}
@@ -212,7 +214,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	```
 	# Ubuntu
 	sudo cp $bioSyntax/less/src-hilite-lesspipe_BIO.sh \
-	        /usr/share/source-highlight/src-hilite-lesspipe.sh
+	/usr/share/source-highlight/src-hilite-lesspipe.sh
 
 	sudo chmod 755 /usr/share/source-highlight/src-hilite-lesspipe.sh
 	```
