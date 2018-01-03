@@ -20,7 +20,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 {: .language-bash}
 
 
-**Note**: The installation script should be run from root and requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
+**Note**: Some of the installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
 
 # Manual Installation
 
@@ -41,24 +41,7 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 	```
 	{: .language-bash}
 
-2. In the `bioSyntax/sublime` folder rename the `Color%20Scheme%20-%20bioSyntax.sublime-package` file to `Color Scheme - bioSyntax.sublime-package`.
-
-	```
-	mv Color%20Scheme%20-%20bioSyntax.sublime-package \
-	Color\ Scheme\ -\ bioSyntax.sublime-package
-	```
-	{: .language-bash}
-
-3. Copy the bioSyntax theme to your **Sublime** *Application* folder:
-- **Linux**: `/opt/sublime_text/Packages/`
-- **Mac**: `/Applications/Sublime\ Text.app/Contents/MacOS/Packages/`
-
-	```
-	sudo cp Color\ Scheme\ -\ bioSyntax.sublime-package <insert-path>
-	```
-	{: .language-bash}
-
-4. Copy the `$bioSyntax/sublime/*.sublime-syntax` files into the Sublime *Packages* folder:
+2. Copy the `$bioSyntax/sublime/*.sublime-syntax` files into the Sublime *Packages* folder:
 - **Linux**: `~/.config/sublime-text-3/Packages/User/`
 - **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/`
 - **Mac**: `/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
@@ -68,20 +51,21 @@ bioSyntax comes with a handy installation script. Simply download the latest rel
 	```
 	{: .language-bash}
 
+3. Copy over the `$bioSyntax/sublime/*.sublime-settings` settings and `$bioSyntax/sublime/bioSyntax.tmTheme` theme files
 
-5. Restart **Sublime** and select the bioSyntax (bioMonokai) theme.
+	```
+	cp $bioSyntax/*.sublime-settings -d <insert-path>
+	cp $bioSyntax/bioSyntax.tmTheme -d <insert-path>
+	```
+	{: .language-bash}
 
-	`Preferences > Color Scheme > bioMonokai`
+4. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
 
-6. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
-
-7. You now have pretty formats!
+5. Restart **Sublime** and you now have pretty formats!
 
 We're working on adding bioSyntax intallation via Sublime's Package Control. (NOT IMPLEMENTED YET)
 - Install [Package Control for Sublime](https://packagecontrol.io/installation).
-- Once installed, in Sublime, go to `Preferences > Package Control > Package Control: Install Package` and search for `BioSyntax`, and click on it. Package Control will install the syntax files for you.
-If not, follow the manual installation instructions below:
-
+- Once installed, in Sublime, go to `Preferences > Package Control > Package Control: Install Package` and search for `bioSyntax`, and click on it. Package Control will install the syntax files for you.
 
 ## gedit
 **(Linux / Win)**
