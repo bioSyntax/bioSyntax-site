@@ -67,7 +67,7 @@ do
 		sleep 0 # do nothing
 	else
 		# Draw Helix
-		for BASE in $(echo $SEQ | sed -e 's/\(.\)/\1\n/g' -)
+		for BASE in $(echo $SEQ | sed -e 's/\(.\)/\1\n/g')
 		do
 			# Declare Watson and Crick bases
 			#echo $BASE
