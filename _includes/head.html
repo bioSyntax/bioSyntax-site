@@ -20,6 +20,14 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 
+<!-- HTTPS redirect for website -->
+<script type="text/javascript">
+    var host = "biosyntax.org";
+	    if ((host == window.location.host) && (window.location.protocol != "https:"))
+		        window.location.protocol = "https";
+</script>
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110034493-1"></script>
 <script>

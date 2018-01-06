@@ -84,7 +84,7 @@ If you made something useful, chances are others will want to use it too. To add
 3. [Fork](https://github.com/bioSyntax/bioSyntax#fork-destination-box) bioSyntax and add your file to `$bioSyntax/alt-syntax/<File_type>-<ID>_<Program>.[lang | vim]`
 
 	```
-	# An example for fasta files in vim which colors by nt by codon
+	# An example for fasta files for vim which colors nts by codon
 	alt-syntax/fasta-codonPaint_vim.vim
 	```
 
