@@ -4,7 +4,7 @@ layout: post
 
 ## Syntax Highlighting for Computational Biology.
 
-Intuitive coloring for `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, & more formats.
+Our goal is to make data intuitive for scientists, helping you navigate and comprehend its significance. Currently supporting `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, & [more formats]([& more](https://biosyntax.org/man#supported-file-formats).
 
 <div style="text-align:center">
 <script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
@@ -25,7 +25,11 @@ Large data can also be directly piped into **less** with `sam-less`, `vcf-less`,
 
 &nbsp;
 
+### Collaborate
+
 We're actively developing bioSyntax; we'd love to hear your comments, feedback and suggestions for further development. [Drop us a line on github](https://github.com/bioSyntax/bioSyntax/issues) or [email](mailto:info@bioSyntax.org).
+
+If you'd like to help out, have intimate understanding of a scientific data-type, or are looking for a fun design / optimization problem check the [development page](dev).
 
 ------------------------------------------------------------------------------
 
