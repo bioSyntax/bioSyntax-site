@@ -9,7 +9,13 @@ markdown: kramdown
 ---
 	"HAPPINESS ONLY REAL WHEN SHARED" -C. McCandless
 
-bioSyntax is a community project for scientific syntax highlighting. We encourage you to change and customize it to suit your needs. This page is a collection of resources to help you start that journey. Once you create something helpful, chances are others will find it helpful too, so share :)
+## Community Charter
+
+bioSyntax is a community project for scientific syntax highlighting. We encourage you to explore, change and customize it to suit your needs. This page is a collection of resources to help you start that journey. Once you create something helpful, chances are others will find it helpful too, so share it here :)
+
+Like many Open Source projects, we're volunteers with a common goal. We encourage new and creative solutions but require respectiful and professional conduct with one another. If you have any concerns or issues arise, let us know [info{AT}bioSyntax.org](mailto:info@bioSyntax.org) or contact any of the core devs.
+
+Like in life; the **<a href="https://en.wikipedia.org/wiki/Fisher%27s_fundamental_theorem_of_natural_selection" target="_blank">Fundamental Theorem of Natural Selection</a>** applies to Open Source software.
 
 {:toc}
 
