@@ -15,7 +15,7 @@ bioSyntax is a community project for scientific syntax highlighting. We encourag
 
 Like many Open Source projects, we're volunteers with a common goal. We encourage new and creative solutions but require respectiful and professional conduct with one another. If you have any concerns or issues arise, let us know [info{AT}bioSyntax.org](mailto:info@bioSyntax.org) or contact any of the core devs.
 
-Like in life; the **<a href="https://en.wikipedia.org/wiki/Fisher%27s_fundamental_theorem_of_natural_selection" target="_blank">Fundamental Theorem of Natural Selection</a>** applies to Open Source software.
+Like in life; **<a href="https://en.wikipedia.org/wiki/Fisher%27s_fundamental_theorem_of_natural_selection" target="_blank">The Fundamental Theorem of Natural Selection</a>** applies to Open Source software.
 
 {:toc}
 
@@ -77,21 +77,23 @@ If you're particular about how you want everything to look. Feel free to tweak t
 
 ## Alternative / User Definitions
 
+See Also: [**Alternative Syntax List**](https://github.com/bioSyntax/bioSyntax/tree/master/alt-syntax)
+
 To account for the variety of use-cases, there is a collection of alternative syntax highlighting definitions in `$bioSyntax/alt-syntax/`. These are not installed by default but can replace the respective bioSyntax langauge defintion files.
 
 ### Submitting an Alternative Language Definition
 
 If you made something useful, chances are others will want to use it too. To add it to bioSyntax:
 
-1. There's a quick (above) to get you started and/or open up an [issue](https://github.com/bioSyntax/bioSyntax/issues) to discuss your idea.
+1. There's a quick referene to get you started (this page) and/or open up an [issue](https://github.com/bioSyntax/bioSyntax/issues) to discuss your idea.
 
 2. Develop the language definition file to your satisfaction. Make sure to test it with your own data as well as the `$bioSyntax/examples/` toy data.
 
-3. [Fork](https://github.com/bioSyntax/bioSyntax#fork-destination-box) bioSyntax and add your file to `$bioSyntax/alt-syntax/<File_type>-<ID>_<Program>.[lang | vim]`
+3. [Fork](https://github.com/bioSyntax/bioSyntax#fork-destination-box) bioSyntax and add your file to `$bioSyntax/alt-syntax/<Program>_<File_type>-<ID>.[lang|vim]`
 
 	```
-	# An example for fasta files for vim which colors nts by codon
-	alt-syntax/fasta-codonPaint_vim.vim
+	# An example for fasta files for vim which finds an ORF and highlights it
+	alt-syntax/vim_fasta-ORF.vim
 	```
 
 4. Commit your changes and submit a `Pull` request to add your changes to bioSyntax. In the pull-request form please include:
@@ -99,7 +101,6 @@ If you made something useful, chances are others will want to use it too. To add
 	- The name/ID of your syntax(es) and for which program(s) it's for.
 	- A short (<50 word) description of what it does that's unique.
 	- A screenshot of the syntax in action.
-
 
 
 ## Other ways to Collaborate
@@ -166,6 +167,7 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 - [Syntax-higlighting in vim](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 - [Syntax Language Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html)
 - [Writing a `theme` set for vim](http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/)
+- [Vim Regex](http://vimregex.com/)
 
 ### Development
 
