@@ -13,14 +13,29 @@ modified: 2017-12-22
 bioSyntax comes with a handy installation script. Simply download the latest release and run:
 
 ```
-	bash bioSyntax_SETUP.sh <editor-of-choice>
+bash bioSyntax_SETUP.sh <editor-of-choice>
 
-	# <editors> = vim || less || gedit || sublime
+# <editors> = vim || less || gedit || sublime
 ```
 {: .language-bash}
 
 
 **Note**: Some of the installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
+
+## Cloning / Forking bioSyntax for development
+
+For installing bioSyntax, download the [latest zip release]({{ site.owner.release }}).
+
+To clone/fork the complete bioSyntax repository including development files and submodules, use:
+
+```
+git clone --recursive https://github.com/bioSyntax/bioSyntax.git
+
+# Or if you already cloned it
+git submodule update --init
+```
+{: .language-bash}
+
 
 # Manual Installation
 
