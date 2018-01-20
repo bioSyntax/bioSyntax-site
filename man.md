@@ -125,7 +125,7 @@ File format and software compatibility matrix for bioSyntax.
 | o |   In Development  |
 | - |   Unavailable     |
 
-## Core Syntaxes
+## Core bioSyntax
 
 | File Format | Description                 | sublime | vim | gedit | less |
 |:------------|:----------------------------|:-------:|:---:|:-----:|:----:|
@@ -149,11 +149,22 @@ File format and software compatibility matrix for bioSyntax.
 | -           | Hydrophobicity              |    X    |  -  |   X   | -    |
 | .fai        | Fasta Index (faidx)         |    X    |  X  |   X   | X    |
 | .flagstat   | samtools flag summary       |    X    |  X  |   X   | X    |
-| .wig        | Wiggle data                 |    o    |  -  |   X   | -    |
-| .newick     | Tree Format                 |    -    |  -  |   -   | -    |
+| .wig        | Wiggle data                 |    -    |  -  |   X   | -    |
 | .pdbx       | Protein Structure (large)   |    -    |  -  |   -   | -    |
 | .phylip     | Multiple Sequence Alignment |    -    |  -  |   -   | -    |
+| .newick     | Tree Format                 |    -    |  -  |   -   | -    |
+| [.nexus](http://informatics.nescent.org/wiki/NEXUS_Specification) |  Phylogenetics data | - | X | - | - |
 | .cwl        | Common Workflow Language    |    -    |  -  |   -   | -    |
+
+## See Also: [Alternative/User Syntax Definitions](https://github.com/bioSyntax/bioSyntax/tree/master/alt-syntax)
+These syntaxes are not part of the unified bioSyntax suite but often serve specialized functions.
+
+## Science Syntaxes
+
+| File Format | Description                 | sublime | vim | gedit | less |
+|-------------|-----------------------------|:-------:|:---:|:-----:|:----:|
+| .gaussian | Gaussian File (chemistry)    |    -    |  X  |   -   | -    |
+
 
 If you'd like to add support for another file-format; check the [development](dev) page to get started.
 
