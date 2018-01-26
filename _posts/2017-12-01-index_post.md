@@ -4,7 +4,7 @@ layout: post
 
 ## Syntax Highlighting for Computational Biology.
 
-Our goal is to make data intuitive for scientists, helping you navigate and comprehend its significance. Currently supporting `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, & [more formats]([& more](https://biosyntax.org/man#supported-file-formats).
+Our goal is to make data intuitive for scientists, helping you navigate and comprehend its significance. Currently supporting `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, `.cwl`, [& more formats](https://biosyntax.org/man#supported-file-formats).
 
 <div style="text-align:center">
 <script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
