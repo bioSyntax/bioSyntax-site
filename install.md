@@ -166,6 +166,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 - **Mac**: (Installing **source-highlight** is easiest via homebrew. The following updates brew if it is installed; installs it otherwise.)
 
 	```
+	# Mac
 	which -s brew
 	if [[ $? != 0 ]] ; then
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -180,6 +181,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 - **Mac**: (install/update via brew)
 
 	```
+	# Mac
 	if [[ ! -z `brew ls --versions "source-highlight"` ]]; then
 		brew upgrade source-highlight
 	else
@@ -191,38 +193,56 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 2. Unzip the downloaded bioSyntax release, `$bioSyntax`.
 
 3. In the `$bioSyntax/less/` folder, copy the `biosyntax.outlang` and `biosyntax-vcf.outlang` files to the **source-highlight** folder:
-- **Linux**: `/usr/share/source-highlight/`
+- **Linux**: `~/.local/share/source-highlight/` or `/usr/share/source-highlight/`
 - **Mac**: `/usr/local/opt/source-highlight/share/source-highlight/`
 
 	```
-	sudo cp $bioSyntax/less/biosyntax.outlang <insert-path>
-	sudo cp $bioSyntax/less/biosyntax-vcf.outlang <insert-path>
+	# Linux
+	cp $bioSyntax/less/biosyntax.outlang     ~/.local/share/source-highlight/
+	cp $bioSyntax/less/biosyntax-vcf.outlang ~/.local/share/source-highlight/
+
+	# Mac
+	sudo cp $bioSyntax/less/biosyntax.outlang     /usr/local/opt/source-highlight/share/source-highlight/
+	sudo cp $bioSyntax/less/biosyntax-vcf.outlang /usr/local/opt/source-highlight/share/source-highlight/
 	```
 	{: .language-bash}
 
-4. Copy the bioSyntax language definition `*.lang` and style definition `*.style` files to the paths as above:
+4. Copy the bioSyntax language and style definition files (`*.lang` and `*.style`) to same paths as above:
 
 	```
-	sudo cp $bioSyntax/less/*.style <insert-path>
-	sudo cp $bioSyntax/less/*.lang <insert-path>
+	# Linux
+	cp $bioSyntax/less/*.style ~/.local/share/source-highlight/
+	cp $bioSyntax/less/*.lang  ~/.local/share/source-highlight/
+
+	#Mac
+	sudo cp $bioSyntax/less/*.style /usr/local/opt/source-highlight/share/source-highlight/
+	sudo cp $bioSyntax/less/*.lang  /usr/local/opt/source-highlight/share/source-highlight/
 	```
 	{: .language-bash}
 
-5. Find where **source-highlight** installed its `src-hilite-lesspipe.sh` script, and replace it with `$bioSyntax/less/src-hilite-lesspipe_BIO.sh`. Make the script executable.
+5. Find and replace **source-highlight**'s `src-hilite-lesspipe.sh` script with `$bioSyntax/less/src-hilite-lesspipe_bio.sh`. Make the script executable.
 
 	```
-	# Ubuntu
-	sudo cp $bioSyntax/less/src-hilite-lesspipe_BIO.sh \
-	/usr/share/source-highlight/src-hilite-lesspipe.sh
+	# Linux (Ubuntu)
+	cp $bioSyntax/less/src-hilite-lesspipe-bio.sh \
+	~/.local/share/source-highlight/
 
-	sudo chmod 755 /usr/share/source-highlight/src-hilite-lesspipe.sh
+	sudo chmod 755 ~/.local/share/source-highlight/src-hilite-lesspipe-bio.sh
+
+
+	# Mac
+	sudo cp $bioSyntax/less/src-hilite-lesspipe-bio.sh \
+	/usr/local/opt/source-highlight/share/source-highlight/src-hilite-lesspipe.sh
+
+	sudo chmod 755 /usr/local/opt/source-highlight/share/source-highlight/src-hilite-lesspipe.sh
 	```
 	{: .language-bash}
 
 6. In the `$bioSyntax/less/` folder, append the appropriate `*_append.txt` file to your shell configuration file (rc file).
-- **Linux**: Uses `$bioSyntax/less/rc_append.txt`
+- **Linux**: Use `$bioSyntax/less/rc_append.txt`
 
 	```
+	# Check your shell
 	echo $SHELL
 	# Outputs:
 	'          $SHELL            $RCFILE '
@@ -234,7 +254,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	{: .language-bash}
 
 	```
-	cat $bioSyntax/less/rc_append.txt >> $RCFILE
+	cat $bioSyntax/less/rc_append.txt >> ~/.zshrc
 	```
 	{: .language-bash}
 
@@ -246,12 +266,10 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 			cat $bioSyntax/less/bp_append.txt >> ~/.bashrc;
 		fi
 	fi
-
-	# ...
 	```
 	{: .language-bash}
 
 8. Restart your computer for your rc files to update, open a file with **less** and you now have pretty formats!
 
 
-#### [Uninstalling bioSyntax](uninstall)
+#### [Uninstalling bioSyntax :'(](uninstall)
