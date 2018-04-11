@@ -13,6 +13,10 @@ Our goal is to make data intuitive for scientists, helping you navigate and comp
 <!--[<img src="http://biosyntax.org/images/sam-less-2.gif">](images/screens/sam-less.png)
 -->
 
+### We'd like to know how bioSyntax can be developed to help your workflow.
+### [Tell us what you think! (~5m)](https://goo.gl/forms/YO89fEPw71JpH3Ac2)
+
+
 ### [INSTALL bioSyntax](install)
 
 ### Usage
