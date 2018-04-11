@@ -4,7 +4,7 @@ title: Installing bioSyntax
 image:
   feature: rna-banner.jpg
 comments: true
-modified: 2017-12-22
+modified: 2018-04-11
 ---
 # bioSyntax Installation
 
@@ -22,7 +22,7 @@ bash bioSyntax_INSTALL.sh <editor-of-choice>
 
 **Note**: Some of the installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
 
-## Cloning / Forking bioSyntax for development
+## Forking bioSyntax for development
 
 For installing bioSyntax, download the [latest zip release]({{ site.owner.release }}).
 
@@ -46,6 +46,13 @@ git submodule update --init
 
 ## Sublime
 **(Linux / Mac / Win)**
+
+### via Package Control
+
+- Install [Package Control for Sublime](https://packagecontrol.io/installation).
+- In Sublime, `Preferences > Package Control > Package Control: Install Package` and search for `bioSyntax`.
+
+### Manual Install
 
 0. Install [Sublime Text 3](http://www.sublimetext.com/).
 
@@ -78,9 +85,6 @@ git submodule update --init
 
 5. Restart **Sublime** and you now have pretty formats!
 
-We're working on adding bioSyntax intallation via Sublime's Package Control. (NOT IMPLEMENTED YET)
-- Install [Package Control for Sublime](https://packagecontrol.io/installation).
-- Once installed, in Sublime, go to `Preferences > Package Control > Package Control: Install Package` and search for `bioSyntax`, and click on it. Package Control will install the syntax files for you.
 
 ## gedit
 **(Linux / Win)**
@@ -124,7 +128,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 ```
 {: .langauge-bash}
 
-### Manual instructions
+### Manual install
 
 1. Unzip the downloaded bioSyntax release.
 2. Find your **vim profile folder**, and make a `syntax`, `ftdetect`, and `colors` directories in it, if they don't exist.
@@ -270,6 +274,5 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	{: .language-bash}
 
 8. Restart your computer for your rc files to update, open a file with **less** and you now have pretty formats!
-
 
 #### [Uninstalling bioSyntax :'(](uninstall)
