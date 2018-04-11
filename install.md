@@ -13,7 +13,7 @@ modified: 2017-12-22
 bioSyntax comes with a handy installation script. Simply download the latest release and run:
 
 ```
-bash bioSyntax_SETUP.sh <editor-of-choice>
+bash bioSyntax_INSTALL.sh <editor-of-choice>
 
 # <editors> = vim || less || gedit || sublime
 ```
@@ -193,7 +193,7 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 2. Unzip the downloaded bioSyntax release, `$bioSyntax`.
 
 3. In the `$bioSyntax/less/` folder, copy the `biosyntax.outlang` and `biosyntax-vcf.outlang` files to the **source-highlight** folder:
-- **Linux**: `~/.local/share/source-highlight/` or `/usr/share/source-highlight/`
+- **Linux**: `~/.local/share/source-highlight/` or `/usr/share/source-highlight/` (requires sudo)
 - **Mac**: `/usr/local/opt/source-highlight/share/source-highlight/`
 
 	```
