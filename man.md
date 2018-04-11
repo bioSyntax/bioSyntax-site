@@ -149,12 +149,11 @@ File format and software compatibility matrix for bioSyntax.
 | -           | Hydrophobicity              |    X    |  -  |   X   | -    |
 | .fai        | Fasta Index (faidx)         |    X    |  X  |   X   | X    |
 | .flagstat   | samtools flag summary       |    X    |  X  |   X   | X    |
+| .cwl        | Common Workflow Language    |    X    |  X  |   X   | -    |
 | .wig        | Wiggle data                 |    -    |  -  |   X   | -    |
-| .pdbx       | Protein Structure (large)   |    -    |  -  |   -   | -    |
-| .phylip     | Multiple Sequence Alignment |    -    |  -  |   -   | -    |
-| .newick     | Tree Format                 |    -    |  -  |   -   | -    |
-| [.nexus](http://informatics.nescent.org/wiki/NEXUS_Specification) |  Phylogenetics data | - | X | - | - |
-| .cwl        | Common Workflow Language    |    -    |  -  |   -   | -    |
+| .nexus      | Phylogenetics data          |    -    |  X  |   -   | -    |
+| .pml        | Pymol Script Language       |    X    |  X  |   -   | -    |
+
 
 ## See Also: [Alternative/User Syntax Definitions](https://github.com/bioSyntax/bioSyntax/tree/master/alt-syntax)
 These syntaxes are not part of the unified bioSyntax suite but often serve specialized functions.
