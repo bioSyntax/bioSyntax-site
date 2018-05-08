@@ -15,16 +15,6 @@ Our goal is to make data intuitive for scientists and help you navigate and comp
 
 ### [Tell us how bioSyntax can develop to help your workflow. (Survey ~5m)](https://goo.gl/forms/YO89fEPw71JpH3Ac2)
 
-### [Mozilla Sprint 2018 Updates](https://www.mozillapulse.org/entry/655)
-- Date: May 10 - May 11 (9:00 am - 5:00 pm PST)
-- On-Site Location: Mozilla Vancouver, #209-163 W Hastings St, Vancouver, BC V6B 1H5, Canada (NOTE: No on-site parking available)
-- Join us for the pre-Sprint [Demo Call](https://public.etherpad-mozilla.org/p/ol5-demos-b) on Tuesday, May 8, 16:00 UTC to learn more about the project!
-
-**CONTACT:**
-- Project Lead: Alyssa Fegen ([alyssafegen at alumni.ubc.ca](mailto:alyssafegen@alumni.ubc.ca)); will be on-site
-- [Slack Channel](https://join.slack.com/t/biosyntax/shared_invite/enQtMzU5OTAwNTc0MjI5LTIxNGU4YzQ1ODljZjg0OTE2M2Y5MDY0MjUwOTA4ZjIwMjVjYjgzNTA5ZGM1ZTliNDMwMGUxMmUzOTI3YWMwOTk) (NOTE: Invite link expires on May 13; contact dev team for invites subsequently)
-- [Discord Server](https://discord.gg/PAD6y4p) (NOTE: Invite link expires on May 13; contact dev team for invites subsequently)
-
 ### [INSTALL bioSyntax](install)
 
 ### Usage
@@ -46,6 +36,17 @@ If you'd like to help out, have intimate understanding of a scientific data-type
 ------------------------------------------------------------------------------
 
 ## Updates
+
+#### [Mozilla Sprint 2018](https://www.mozillapulse.org/entry/655)
+- We are participating in the Mozilla Global Sprint this year! Get involved with developing for bioSyntax!
+- Date: May 10 - May 11 (9:00 am - 5:00 pm PST)
+- On-Site Location: Mozilla Vancouver, #209-163 W Hastings St, Vancouver, BC V6B 1H5, Canada (NOTE: No on-site parking available)
+- Join us for the pre-Sprint [Demo Call](https://public.etherpad-mozilla.org/p/ol5-demos-b) on Tuesday, May 8, 16:00 UTC to learn more about the project and how you can contribute, or visit our [GitHub Issues](https://github.com/bioSyntax/bioSyntax/issues) section!
+
+**CONTACT:**
+- Project Lead: Alyssa Fegen ([alyssafegen at alumni.ubc.ca](mailto:alyssafegen@alumni.ubc.ca)); will be on-site during event
+- [Slack Channel](https://join.slack.com/t/biosyntax/shared_invite/enQtMzU5OTAwNTc0MjI5LTIxNGU4YzQ1ODljZjg0OTE2M2Y5MDY0MjUwOTA4ZjIwMjVjYjgzNTA5ZGM1ZTliNDMwMGUxMmUzOTI3YWMwOTk) (NOTE: Invite link expires on May 13; contact dev team for invites subsequently)
+- [Discord Server](https://discord.gg/PAD6y4p) (NOTE: Invite link expires on May 13; contact dev team for invites subsequently)
 
 #### 2018-04-11 - bioSyntax v0.1-beta4 + Development Survey
 - We're working on a [user experience survey](https://goo.gl/forms/YO89fEPw71JpH3Ac2) to focus development.
