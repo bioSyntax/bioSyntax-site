@@ -20,7 +20,7 @@ bash bioSyntax_INSTALL.sh <editor-of-choice>
 {: .language-bash}
 
 
-**Note**: Some of the installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well.
+**Note**: Some of the installation script requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Installation instructions below, but some files will need to be placed in paths accessed via root as well. For Windows, the script runs best with the Git Bash terminal, which may be required to be run as an administrator.
 
 ## Forking bioSyntax for development
 
