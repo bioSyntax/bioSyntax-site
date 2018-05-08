@@ -29,7 +29,7 @@ For installing bioSyntax, download the [latest zip release]({{ site.owner.releas
 To clone/fork the complete bioSyntax repository including development files and submodules, use:
 
 ```
-git clone --recursive https://github.com/bioSyntax/bioSyntax.git
+git clone --recurse-submodules https://github.com/bioSyntax/bioSyntax.git
 
 # Or if you already cloned it
 git submodule update --init
@@ -47,12 +47,12 @@ git submodule update --init
 ## Sublime
 **(Linux / Mac / Win)**
 
-### via Package Control
+### via Package Control (Easiest, no admin/sudo privileges required):
 
 - Install [Package Control for Sublime](https://packagecontrol.io/installation).
 - In Sublime, `Preferences > Package Control > Package Control: Install Package` and search for `bioSyntax`.
 
-### Manual Install
+### Manual Install (sudo/admin privileges may be required):
 
 0. Install [Sublime Text 3](http://www.sublimetext.com/).
 
@@ -64,20 +64,19 @@ git submodule update --init
 	{: .language-bash}
 
 2. Copy the `$bioSyntax/sublime/*.sublime-syntax` files into the Sublime *Packages* folder:
-- **Linux**: `~/.config/sublime-text-3/Packages/User/`
-- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/User/`
-- **Mac**: `/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
+- **Linux**: `~/.config/sublime-text-3/Packages/bioSyntax/`
+- **Windows**: `~/AppData/Roaming/Sublime\ Text\ 3/Packages/bioSyntax/`
+- **Mac**: `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/bioSyntax/`
 
 	```
-	cp $bioSyntax/*.sublime-syntax -d <insert-path>
+	cp $bioSyntax/sublime/*.sublime-syntax -d <insert-path>
 	```
 	{: .language-bash}
 
-3. Copy over the `$bioSyntax/sublime/*.sublime-settings` settings and `$bioSyntax/sublime/bioSyntax.tmTheme` theme files
+3. Copy over the `$bioSyntax/sublime/bioSyntax.tmTheme` theme file
 
 	```
-	cp $bioSyntax/*.sublime-settings -d <insert-path>
-	cp $bioSyntax/bioSyntax.tmTheme -d <insert-path>
+	cp $bioSyntax/sublime/bioSyntax.tmTheme -d <insert-path>
 	```
 	{: .language-bash}
 
@@ -86,41 +85,41 @@ git submodule update --init
 5. Restart **Sublime** and you now have pretty formats!
 
 
-## gedit
+## gedit (sudo/admin privileges may be required):
 **(Linux / Win)**
 
 0. Install [Gedit](https://wiki.gnome.org/Apps/Gedit).
 1. Unzip the downloaded bioSyntax release.
 2. In bioSyntax folder copy gedit style, `$bioSyntax/gedit/bioSyntax.xml`, file to the appropriate gtksourceview styles folder.
-- **Linux**: `/usr/share/gtksourceview-3.0/styles/`
+- **Linux**: `$HOME/.local/share/gtksourceview-3.0/styles`
 - **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/styles/`
 
 	```
-	sudo cp $bioSyntax/gedit/bioSyntax.xml <insert-path>
+	cp $bioSyntax/gedit/bioSyntax.xml <insert-path>
 	```
 	{: .language-bash}
 
 3. Copy the gedit `*.lang` files to the appropriate gtksourceview language-spec folder.
-- **Linux**: `/usr/share/gtksourceview-3.0/language-specs/`
+- **Linux**: `$HOME/.local/share/gtksourceview-3.0/language-specs`
 - **Windows**: `/c/Program\ Files/gedit/share/gtksourceview-3.0/language-specs/`
 
 	```
-	sudo cp $bioSyntax/gedit/*.lang <insert-path>
+	cp $bioSyntax/gedit/*.lang <insert-path>
 	```
 	{: .language-bash}
 
 4. Restart `gedit` and select the bioSyntax theme
 
-	`Edit > Preferences > Font & Color > bioSyntax'`
+	`Edit > Preferences > Font & Color > bioSyntax`
 
 5.  You now have pretty formats!
 
 ## vim
 **(Linux / Mac / Win)**
 
-### via Pathogen
+### via Pathogen (Easiest installation, may require sudo/admin privileges):
 
-If you have [Pathogen](https://github.com/tpope/vim-pathogen) installed:
+If you have [Pathogen](https://github.com/tpope/vim-pathogen) and [Git](https://git-scm.com/downloads) installed:
 
 ```
 cd ~/.vim/bundle &&
@@ -138,6 +137,9 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	```
 	# Linux/Mac
 	mkdir -p ~/.vim ~/.vim/syntax ~/.vim/ftdetect ~/.vim/colors
+	
+	# Windows
+	mkdir -p $HOME/vimfiles $HOME/vimfiles/syntax $HOME/vimfiles/ftdetect $HOME/vimfiles/colors
 	```
 	{: .language-bash}
 
@@ -147,23 +149,34 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	# Linux/Mac
 	touch ~/.vimrc
 	if ! grep -q "syntax enable" ~/.vimrc; then echo "syntax enable\\n" >> ~/.vimrc; fi
+	
+	# Windows
+	touch $HOME/_vimrc
+	if ! grep -q ":syntax enable" $HOME/_vimrc; then echo ":syntax enable\\n" >> $HOME/_vimrc; fi
 	```
 	{: .language-bash}
 
 4. Copy the vim syntax, auto-detection, and colour files from `bioSyntax/vim`  into the respective vim folders:
 
 	```
-	cp $bioSyntax/vim/*.vim ~/.vim/syntax/
+	# Linux/Mac
+	cp $bioSyntax/vim/syntax/*.vim ~/.vim/syntax/
 	cp $bioSyntax/vim/ftdetect/*.vim ~/.vim/ftdetect/
 	cp $bioSyntax/vim/colors/bioSyntax.vim ~/.vim/colors/
+	
+	# Windows
+	cp $bioSyntax/vim/syntax/*.vim $HOME/.vim/syntax/
+	cp $bioSyntax/vim/ftdetect/*.vim $HOME/.vim/ftdetect/
+	cp $bioSyntax/vim/colors/bioSyntax.vim $HOME/.vim/colors/
 	```
 	{: .language-bash}
 
 5. Restart vim and you now have pretty formats!
 
 
-## less
+## less (Hardest installation, sudo privileges may be required)
 **(Linux, Mac)**
+NOTE: Syntax-highlighting can be turned off using `:syntax off` or removing the `:syntax enable` line from the `.vimrc/_vimrc` file.
 
 0. Ensure that your applications/packages are up-to-date:
 - **Linux**: `sudo apt-get update`
@@ -197,48 +210,37 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 2. Unzip the downloaded bioSyntax release, `$bioSyntax`.
 
 3. In the `$bioSyntax/less/` folder, copy the `biosyntax.outlang` and `biosyntax-vcf.outlang` files to the **source-highlight** folder:
-- **Linux**: `~/.local/share/source-highlight/` or `/usr/share/source-highlight/` (requires sudo)
+- **Linux**: `$HOME/.local/share/source-highlight`
 - **Mac**: `/usr/local/opt/source-highlight/share/source-highlight/`
 
 	```
-	# Linux
-	cp $bioSyntax/less/biosyntax.outlang     ~/.local/share/source-highlight/
-	cp $bioSyntax/less/biosyntax-vcf.outlang ~/.local/share/source-highlight/
-
-	# Mac
-	sudo cp $bioSyntax/less/biosyntax.outlang     /usr/local/opt/source-highlight/share/source-highlight/
-	sudo cp $bioSyntax/less/biosyntax-vcf.outlang /usr/local/opt/source-highlight/share/source-highlight/
+	cp $bioSyntax/less/bioSyntax.outlang <insert-path>
+	cp $bioSyntax/less/bioSyntax-vcf.outlang <insert-path>
 	```
 	{: .language-bash}
 
 4. Copy the bioSyntax language and style definition files (`*.lang` and `*.style`) to same paths as above:
 
 	```
-	# Linux
-	cp $bioSyntax/less/*.style ~/.local/share/source-highlight/
-	cp $bioSyntax/less/*.lang  ~/.local/share/source-highlight/
-
-	#Mac
-	sudo cp $bioSyntax/less/*.style /usr/local/opt/source-highlight/share/source-highlight/
-	sudo cp $bioSyntax/less/*.lang  /usr/local/opt/source-highlight/share/source-highlight/
+	cp $bioSyntax/less/*.style <insert-path>
+	cp $bioSyntax/less/*.lang <insert-path>
 	```
 	{: .language-bash}
 
 5. Find and replace **source-highlight**'s `src-hilite-lesspipe.sh` script with `$bioSyntax/less/src-hilite-lesspipe_bio.sh`. Make the script executable.
 
 	```
-	# Linux (Ubuntu)
-	cp $bioSyntax/less/src-hilite-lesspipe-bio.sh \
-	~/.local/share/source-highlight/
+	# Ubuntu
+	cp $bioSyntax/less/src-hilite-lesspipe-bio-LINUX.sh \
+	$HOME/.local/share/source-highlight/src-hilite-lesspipe-bio.sh
 
-	sudo chmod 755 ~/.local/share/source-highlight/src-hilite-lesspipe-bio.sh
-
-
+	chmod 755 $HOME/.local/share/source-highlight/src-hilite-lesspipe-bio.sh
+	
 	# Mac
-	sudo cp $bioSyntax/less/src-hilite-lesspipe-bio.sh \
-	/usr/local/opt/source-highlight/share/source-highlight/src-hilite-lesspipe.sh
-
-	sudo chmod 755 /usr/local/opt/source-highlight/share/source-highlight/src-hilite-lesspipe.sh
+	cp $bioSyntax/less/src-hilite-lesspipe-bio-MAC.sh \
+	/usr/local/bin/src-hilite-lesspipe.sh
+	
+	chmod 755 /usr/local/bin/src-hilite-lesspipe.sh
 	```
 	{: .language-bash}
 
