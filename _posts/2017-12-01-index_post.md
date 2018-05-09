@@ -41,7 +41,7 @@ If you'd like to help out, have intimate understanding of a scientific data-type
 - We are participating in the Mozilla Global Sprint this year! Get involved with developing for bioSyntax!
 - Date: May 10 - May 11 (9:00 am - 5:00 pm PST)
 - On-Site Location: Mozilla Vancouver, #209-163 W Hastings St, Vancouver, BC V6B 1H5, Canada (NOTE: No on-site parking available)
-- Join us for the pre-Sprint [Demo Call](https://public.etherpad-mozilla.org/p/ol5-demos-b) on Tuesday, May 8, 16:00 UTC to learn more about the project and how you can contribute, or visit our [GitHub Issues](https://github.com/bioSyntax/bioSyntax/issues) section!
+- Join us for the pre-Sprint [Demo Call](https://public.etherpad-mozilla.org/p/ol5-demos-b) on Tuesday, May 8, 16:00 UTC to learn more about the project and how you can contribute, or visit the [Sprint master post](https://github.com/bioSyntax/bioSyntax/issues/38)!
 
 **CONTACT:**
 - Project Lead: Alyssa Fegen ([alyssafegen at alumni.ubc.ca](mailto:alyssafegen@alumni.ubc.ca)); will be on-site during event
