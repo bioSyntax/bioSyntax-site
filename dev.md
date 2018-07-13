@@ -240,6 +240,30 @@ Syntax highlighting in **less** is non-standard. We use the **source-highlight**
 - Windows: `C:/Program Files/Sublime Text 3/Packages/`
 - Mac: `/Applications/Sublime Text.app/Contents/MacOS/Packages/`
 
+# Development for VS Code
+
+VS Code has native support for syntax highlighting.
+
+#### Resources
+
+- [Yo Code - Extension Generator](https://code.visualstudio.com/docs/extensions/yocode)
+- [Adding a New Language](https://code.visualstudio.com/docs/extensions/themes-snippets-colorizers#_adding-a-new-language-colorizer)
+- [Colorizing rules](https://manual.macromates.com/en/language_grammars)
+
+### Development
+
+1. Before you develop a plugin for VS Code, you need Node.js installed and available in your $PATH.
+2. Install the Yo Code Generator by running:```npm install -g yo generator-code```
+3. Launch the generator by running ``yo code``, and choose "New Language Support", the generator will prepare the skeleton for you. During this process, you might be required to provide a Personal Access Token, if true, you can follow the [guidance](https://code.visualstudio.com/docs/extensions/publish-extension) to apply for a PAT.
+4. Since the default theme might not provide as much as highlightings as we want, you can launch the generator in a new place, and choose "New Color Theme", and then merge the two folders.
+5. To load an extension, you need to copy the files to your VS Code extensions folder `.vscode/extensions`. Depending on your platform, it is located in the following folders:
+   - Windows `%USERPROFILE%\.vscode\extensions`
+   - macOS `~/.vscode/extensions`
+   - Linux `~/.vscode/extensions`
+   If you want to load your extension each time VS Code runs, copy your project ('side loading') to a new folder under `.vscode/extensions`. For example: `~/.vscode/extensions/myextension`.
+6. If you want to publish the plugin, please refer to [Publishing Extensions](https://code.visualstudio.com/docs/extensions/publish-extension).
+7. Note: Currently, VS Code doesn't provide background highlighting in themes. If you want to implement this function, write a new extension using TypeScript or JavaScript might be the solution.
+
 ********************************************************
 
 <div style="text-align:center">
