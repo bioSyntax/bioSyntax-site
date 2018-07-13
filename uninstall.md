@@ -17,9 +17,10 @@ bioSyntax also comes with an uninstaller script in the release. To use it, run
 ```
 {: .language-bash}
 
-
-
 **Note**: The uninstaller script should also be run from root and requires super-user commands at the moment. If you don't have permissions or don't like this; simply follow the Manual Uninstallation instructions below, but some files will need to be placed in paths accessed via root as well.
+
+
+If you run into any problems open an [issue on github](https://github.com/bioSyntax/bioSyntax/issues) and we can help.
 
 ## sublime
 **(Linux / Mac / Win)**

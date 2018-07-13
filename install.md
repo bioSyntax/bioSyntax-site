@@ -43,6 +43,7 @@ git submodule update --init
 2. [gedit](#gedit)
 3. [vim](#vim)
 4. [less](#less)
+5. [vscode](#vscode)
 
 ## Sublime
 **(Linux / Mac / Win)**
@@ -274,5 +275,15 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 	{: .language-bash}
 
 8. Restart your computer for your rc files to update, open a file with **less** and you now have pretty formats!
+
+## vscode
+**(Linux / Mac / Win)**
+
+1. Open Visual Studio Code
+2. Open Extensions (Ctrl+Shift+X for Windows/Linux and ⇧+⌘+X for Mac)
+3. Search "bioSyntax"
+4. Click Install
+5. When you open a bioSyntax-compatible file, the theme should automatically be applied. However, if it doesn't change, you can manually change your theme to bioSyntax (Ctrl+K Ctrl+T for Windows/Linux and ⌘+K ⌘+T for Mac).
+
 
 #### [Uninstalling bioSyntax :'(](uninstall)
