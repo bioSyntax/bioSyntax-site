@@ -86,8 +86,10 @@ git submodule update --init
 5. Restart **Sublime** and you now have pretty formats!
 
 
-## gedit (sudo/admin privileges may be required):
+## gedit
 **(Linux / Win)**
+
+### Manual Install (sudo/admin privileges may be required):
 
 0. Install [Gedit](https://wiki.gnome.org/Apps/Gedit).
 1. Unzip the downloaded bioSyntax release.
@@ -114,6 +116,20 @@ git submodule update --init
 	`Edit > Preferences > Font & Color > bioSyntax`
 
 5.  You now have pretty formats!
+
+### via Debian/Ubuntu repositories:
+
+[bioSyntax-gedit](https://tracker.debian.org/pkg/biosyntax) will be available into official repositories of Debian 10 and Ubuntu 18.10 (both are not yet released).
+
+Meanwhile, you can manually install deb package available [here](https://packages.debian.org/unstable/biosyntax-gedit) or using the bioSyntax [PPA](https://launchpad.net/~biosyntax/+archive/ubuntu/ppa):
+
+	```
+	sudo add-apt-repository ppa:biosyntax/ppa
+	sudo apt-get update
+	sudo apt-get install biosyntax-gedit
+	```
+
+Once, the package is installed, please read `/usr/share/doc/biosyntax-gedit/README.Debian` to activate the plugin.
 
 ## vim
 **(Linux / Mac / Win)**
@@ -174,10 +190,25 @@ git clone https://github.com/bioSyntax/bioSyntax-vim.git
 
 5. Restart vim and you now have pretty formats!
 
+### via Debian/Ubuntu repositories:
 
-## less (Hardest installation, sudo privileges may be required)
+[bioSyntax-vim](https://tracker.debian.org/pkg/biosyntax) will be available into official repositories of Debian 10 and Ubuntu 18.10 (both are not yet released).
+
+Meanwhile, you can manually install deb package available [here](https://packages.debian.org/unstable/biosyntax-vim) or using the bioSyntax [PPA](https://launchpad.net/~biosyntax/+archive/ubuntu/ppa):
+
+	```
+	sudo add-apt-repository ppa:biosyntax/ppa
+	sudo apt-get update
+	sudo apt-get install biosyntax-vim
+	```
+
+Once, the package is installed, please read `/usr/share/doc/biosyntax-vim/README.Debian` to activate the plugin.
+
+## less
 **(Linux, Mac)**
 NOTE: Syntax-highlighting can be turned off using `:syntax off` or removing the `:syntax enable` line from the `.vimrc/_vimrc` file.
+
+### Manual Install (Hardest installation, sudo privileges may be required):
 
 0. Ensure that your applications/packages are up-to-date:
 - **Linux**: `sudo apt-get update`
@@ -277,6 +308,20 @@ NOTE: Syntax-highlighting can be turned off using `:syntax off` or removing the 
 	{: .language-bash}
 
 8. Restart your computer for your rc files to update, open a file with **less** and you now have pretty formats!
+
+### via Debian/Ubuntu repositories:
+
+[bioSyntax-less](https://tracker.debian.org/pkg/biosyntax) will be available into official repositories of Debian 10 and Ubuntu 18.10 (both are not yet released).
+
+Meanwhile, you can manually install deb package available [here](https://packages.debian.org/unstable/biosyntax-less) or using the bioSyntax [PPA](https://launchpad.net/~biosyntax/+archive/ubuntu/ppa):
+
+	```
+	sudo add-apt-repository ppa:biosyntax/ppa
+	sudo apt-get update
+	sudo apt-get install biosyntax-less
+	```
+
+Once, the package is installed, please read `/usr/share/doc/biosyntax-less/README.Debian` to activate the plugin.
 
 ## vscode
 **(Linux / Mac / Win)**
