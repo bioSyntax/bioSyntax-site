@@ -37,7 +37,10 @@ If you'd like to help out, have intimate understanding of a scientific data-type
 
 ## Updates
 
-#### 2018-080-13 - bioSyntax v1.0 Release
+#### 2018-08-22 - bioSyntax publication
+- Our manuscript has been accepted for [publication in BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2315-y)
+
+#### 2018-08-13 - bioSyntax v1.0 Release
 
 - Syntax highlighting for FASTA, FASTQ, CWL, BED, GTF, PDB, PML, SAM, VCF file formats
 - Available for: `less`, `vim`, `gedit`, `sublime` and `VScode`
@@ -59,5 +62,5 @@ If you'd like to help out, have intimate understanding of a scientific data-type
 - @speleo3 for `vim-pml` & @bbarad for `sublime-pml`
 
 #### Past releases
-- [Pre-print manuscript](https://www.biorxiv.org/content/early/2017/12/20/235820) initial release
+- [bioSyntax Publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2315-y)
 - [Release History](https://github.com/bioSyntax/bioSyntax/releases)
