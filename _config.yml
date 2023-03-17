@@ -1,26 +1,31 @@
-title:            bioSyntax
-description:      Syntax Highlighting for Computational Biology
+title:            RNAlab
+description:      The Laboratory for RNA-Based Lifeforms
 disqus_shortname:
 reading_time:     false
-words_per_minute: 200
+words_per_minute: 120
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url: https://biosyntax.org
-enforce_ssl: biosyntax.org
+url: https://www.rnalab.ca
+enforce_ssl: rnalab.ca
 #url: localhost:4000
 
 # Owner/author information
 owner:
-  name:           bioSyntax
+  name:           A. Babaian
   avatar:         atcg.png
-  bio:            "Syntax Highlighting for Computational Biology"
-  email:          info@bioSyntax.org
+  bio:            "The Laboratory for RNA-Based Lifeforms"
+  email:          artem@rRNA.ca
+  address:        The Donnelly rm.610
+  address2:       160 College St. Toronto.
+  address3:       M5S 3E1  
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:         bioSyntax/bioSyntax
+  twitter:        https://twitter.com/RNA_Life
+  scholar:        https://scholar.google.ca/citations?user=FCjKSWcAAAAJ
+  github:         ababaian
+  focus:          Research focus | Computational Virology & Molecular Genetics
   version:        v1.0.0
-  release:        https://www.bioSyntax.org/release
+
+  release:        
   stackexchange:
   linkedin:
   instagram:
@@ -28,6 +33,11 @@ owner:
   tumblr:
   # google plus id, include the '+', eg +mmistakes
   google_plus:
+
+# Links 
+link:
+  mogen:          https://moleculargenetics.utoronto.ca/
+  donnelly:       https://thedonnellycentre.utoronto.ca/
 
 # Background image to be tiled on all pages
 background:
@@ -39,7 +49,7 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Vancouver
+timezone:    America/Toronto
 future:      true  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown

@@ -1,11 +1,58 @@
 <!-- <span>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span> -->
 
+<style>
+* {
+  box-sizing: border-box;
+  }
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<span><p>
+  <a href="{{ site.url }}">Home</a> &ensp;|&ensp;
+  <a href="{{ site.url }}/research">Research</a> &ensp;|&ensp;
+  <a href="{{ site.url }}/team">Scientists</a> &ensp;|&ensp;
+  <a href="{{ site.url }}/lit">Publications</a> &ensp;|&ensp;
+  <a href="{{ site.url }}/join">Join</a>
+</p></span>
+
+
 <span>
-	<a href="mailto:{{ site.owner.email }}">Contact us: <i class="fa fa-fw fa-envelope"></i></a> &ensp;|&ensp;
-    <a href="http://www.hackseq.com"><img src="{{ site.url }}/images/hackseq_project_tag.png"></a> &ensp;|&ensp;
-    <a href="https://github.com/{{ site.owner.github }}">Source: <\></a>
-	<!-- &ensp;|&ensp;
-	github Star Button
-    <iframe src="https://ghbtns.com/github-btn.html?user=bioSyntax&repo=bioSyntax&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px" style="margin-bottom: -13px"></iframe>
-	-->
+    <div class="row">
+        <div class="column">
+            <!-- empty -->
+        </div>
+        <div class="column" style="background-color:#ddd;">
+            <p>
+                <a href="mailto:{{ site.owner.email }}">Contact RNAlab</a> <br>
+                <a href="mailto:{{ site.owner.email }}"><i class="fa fa-fw fa-envelope"></i></a>
+                <a href="{{ site.owner.twitter }}"><i class="fa fa-fw fa-twitter"></i></a>
+            </p>
+
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <p>Member of <b><a href="{{ site.link.donnelly }}">The Donnelly</a></b><br>
+            & <b><a href="{{ site.link.mogen }}">University of Toronto</a></b></p>
+        </div>
+        <div class="column" style="background-color:#ddd;">
+               {{ site.owner.address }} <br>
+               {{ site.owner.address2 }}<br>
+               {{ site.owner.address3 }}
+        </div>
+        <div class="column">
+            <!-- empty -->
+        </div>
+    </div>
 </span>
