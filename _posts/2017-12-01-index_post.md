@@ -19,9 +19,18 @@ At most 0.1% of Earth’s viruses have been identified, so to characterize the f
 
 ## News
 
+#### 2023-05-05 - RNA virus / Viroid Hybrid Publication
+
+[Hybrids of RNA viruses and viroid-like elements replicate in fungi](https://www.nature.com/articles/s41467-023-38301-2). We massively (+20,000 species) expand the universe of viroid-like agents, including the characterization of a Viroid-like RNA virus (or RNA virus-like Viroid) hybrid infectious agent. This work joins two kingdoms of infectious agents, and offers insights into how primordial viruses may have arisen.
+
+#### 2023-05-01 - Summer intake & awards
+
+The RNAlab is booting up. Welcome Declan, Aiden*, and Jawad* (research assistants); as well as Luke and Alex (engineers) to the lab! * : Recieved UROP awards.
+
+
 #### 2023-01-10 - Research Symbiont Award 2022
 
-Dr. Babaian has been [awarded](https://twitter.com/jbrianbyrd/status/1614433561079062531) the coveted 2023 [Research Symbiont Award](https://researchsymbionts.org/) for outstanding data-sharing resulting in a substantial impact on human health.  
+Artem/Serratus has been [awarded](https://twitter.com/jbrianbyrd/status/1614433561079062531) the coveted 2023 [Research Symbiont Award](https://researchsymbionts.org/) for outstanding data-sharing resulting in a substantial impact on human health.  
 
 #### 2022-10-22 - Founding of RNAlab
 
