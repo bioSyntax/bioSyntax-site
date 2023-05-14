@@ -24,7 +24,7 @@ image:
 <div class="human" style="background-color:#ddd;">
 
   <img align="right" style="width: 100px; height: 100px" 
-  src="{{ "/images/hu/ab.jpg" | prepend: site.baseurl }}">
+  src="{{ "/images/hu/ab_shroom.jpg" | prepend: site.baseurl }}">
   
   <b>Artem Babaian</b> <br>
   <i>Scientist</i>
