@@ -17,6 +17,7 @@ image:
   /* height: 120px; */
   padding: 10px;
   /*height: 100px; /* Should be removed. Only for demonstration */
+  min-width: 320px;
 }
 </style>
 
@@ -47,7 +48,7 @@ image:
 <div class="human" style="background-color:#ddd;">
 
   <img align="right" style="width: 100px; height: 100px" 
-  src="{{ "/images/hu/atcg.png" | prepend: site.baseurl }}">
+  src="{{ "/images/hu/pg.png" | prepend: site.baseurl }}">
   
   <b>Purav Gupta</b> <br>
   <i>High School Student</i>
