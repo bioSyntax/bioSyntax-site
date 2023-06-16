@@ -42,3 +42,4 @@ We recieve *a lot* of applications, and it's difficult to distinguish generic ap
 - Merit Problem 1 - [Viral RdRp structure-function analysis](doc/merit/RNAmerit_001.pdf)
 - Merit Problem 2 - [Computational acceleration of INFERNAL](doc/merit/RNAmerit_002.pdf)
 - Merit Problem 3 - [Characterization of a deep RNA Virus](doc/merit/RNAmerit_003.pdf)
+- Tackle a Evo/Genome problem (#21-30) of the [Unsolved problems of Evo-Devo](https://www.sdbonline.org/sites/fly/lewheldquirk/puzzleq.htm#evolveii)
