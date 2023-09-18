@@ -274,8 +274,9 @@ header .entry-meta {
 #page {
 
 	.entry-content {
+		box-sizing: content-box;
 		margin: 40px 2px 20px 2px;
-		padding: 10px 15px;
+		padding: 32px 16px;
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1);
 		border-radius: 3px;
@@ -287,9 +288,9 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 960px;
 			margin: 50px auto 30px auto;
-			padding: 50px 80px;
+			padding: 50px 80px 20px 80px;
 
 			> p:first-child {
 				@include font-size(20);

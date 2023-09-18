@@ -2,65 +2,36 @@
 layout: post
 ---
 
-## Syntax Highlighting for Computational Biology.
+The Laboratory for RNA-Based Lifeforms (<b>RNAlab</b>) @ University of Toronto is a combined <i>Computational</i> and <i>Molecular</i> research team. Our passion is in understanding the interplay between RNA elements and Genetics. The primary domain where we interrogate this question is through the exploration of the vast evolution and biodiversity of <b>Earth's RNA viruses<b>. <br>
 
-Our goal is to make data intuitive for scientists and help you navigate and comprehend its significance. Currently supporting `.sam`, `.vcf`, `.fasta`, `.fastq`, `.gtf`, `.bed`, `.pdb`, `.cwl`, [& more formats](https://biosyntax.org/man#supported-file-formats).
 
-<div style="text-align:center">
-<script src="https://asciinema.org/a/153567.js" id="asciicast-153567" async></script>
-</div>
+## Our Work
 
-<!--[<img src="http://biosyntax.org/images/sam-less-2.gif">](images/screens/sam-less.png)
--->
+### Serratus: Foundations for a *Planetary-Scale Virus Surveillance Network*
 
-### [Tell us how bioSyntax can develop to help your workflow. (Survey ~5m)](https://goo.gl/forms/YO89fEPw71JpH3Ac2)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ckulYdtTEa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### [INSTALL bioSyntax](install)
+DNA and RNA sequencing data is growing exponentially, outpacing Moore’s Law. Currently, public databases contain 60+ million gigabytes (60 petabytes) of sequencing data from 10+ million samples, and this doubles every 18 months. Samples range from cancer cells in a lab at UofT, to anal swabs of penguins in Antarctica and everything in-between. Along with what researchers intended to study, sequences from the viruses can also be captured, yet go unanalyzed.
 
-### Usage
-
-bioSyntax integrates seamlessly with **vim**, **less**, **gedit**, & **sublime** to automatically recognize [your favorite biological file formats](man#supported-file-formats). To gain the most insight from your data, read our brief [bioSyntax Manual](man).
-
-Large data can also be directly piped into **less** with `sam-less`, `vcf-less`, ..., `xyz-less` commands.
-
-![Example less command](images/sam-less_command.gif)
-
-&nbsp;
-
-### Collaborate
-
-We're actively developing bioSyntax; we'd love to hear your comments, feedback and suggestions for further development. [Drop us a line on github](https://github.com/bioSyntax/bioSyntax/issues) or [email](mailto:info@bioSyntax.org).
-
-If you'd like to help out, have intimate understanding of a scientific data-type, or are looking for a fun design / optimization problem check the [development page](dev).
+At most 0.1% of Earth’s viruses have been identified, so to characterize the full diversity of the viruses on Earth, we develop computing algorithms and techniques to analyze sequencing data at the <b>petabyte-scale</b>. In effect, we recycle billions of dollars of data to drive biological discovery. Recently, in one 11-day analysis we discovered 130,000+ new species of RNA viruses, nearly 10x more than were previously known (including nine new species of surprising Coronaviruses). Moving forward we are developing a system to monitor this global-stream of sequencing data to identify where and when pathogens of pandemic potential show up. It is better that we find them, before they find us.
 
 ------------------------------------------------------------------------------
 
-## Updates
+## News
 
-#### 2018-08-22 - bioSyntax publication
-- Our manuscript has been accepted for [publication in BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2315-y)
+#### 2023-05-05 - RNA virus / Viroid Hybrid Publication
 
-#### 2018-08-13 - bioSyntax v1.0 Release
+[Hybrids of RNA viruses and viroid-like elements replicate in fungi](https://www.nature.com/articles/s41467-023-38301-2). We massively (+20,000 species) expand the universe of viroid-like agents, including the characterization of a Viroid-like RNA virus (or RNA virus-like Viroid) hybrid infectious agent. This work joins two kingdoms of infectious agents, and offers insights into how primordial viruses may have arisen.
 
-- Syntax highlighting for FASTA, FASTQ, CWL, BED, GTF, PDB, PML, SAM, VCF file formats
-- Available for: `less`, `vim`, `gedit`, `sublime` and `VScode`
-- Updated installer script + packaged documentation
-- Welcome Dylan Aissi + Li Yao on as developers
+#### 2023-05-01 - Summer intake & awards
 
-#### 2018-04-11 - bioSyntax v0.1-beta4 + Development Survey
-- We're working on a [user experience survey](https://goo.gl/forms/YO89fEPw71JpH3Ac2) to focus development.
-- New Syntax `vim-nexus`
-- New Syntax `vim-pml` & `sublime-pml`(Pymol Script Language)
-- New Syntax `cwl-sublime` and `cwl-vim` (Common Workflow Language)
-- Add `bam-less` alias for `sam-less` by default
-- Removed `sudo` requirements for linux-gedit & linux-less installations
-- Alternative Syntax: `vim_fasta-ORF`: Syntax for finding and highlighting Open Reading Frames
+The RNAlab is booting up. Welcome Declan, Aiden*, and Jawad* (research assistants); as well as Luke and Alex (engineers) to the lab! * : Recieved UROP awards.
 
-#### Thanks to
-- [Luis Carvalho](https://vim.sourceforge.io/scripts/script.php?script_id=964) for `vim-nexus`
-- @manabuishii for `cwl-sublime` and `cwl-vim`
-- @speleo3 for `vim-pml` & @bbarad for `sublime-pml`
 
-#### Past releases
-- [bioSyntax Publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2315-y)
-- [Release History](https://github.com/bioSyntax/bioSyntax/releases)
+#### 2023-01-10 - Research Symbiont Award 2022
+
+Artem/Serratus has been [awarded](https://twitter.com/jbrianbyrd/status/1614433561079062531) the coveted 2023 [Research Symbiont Award](https://researchsymbionts.org/) for outstanding data-sharing resulting in a substantial impact on human health.  
+
+#### 2022-10-22 - Founding of RNAlab
+
+The *Laboratory for RNA-Based Lifeforms* is officially opening it's doors in The Donnelly Centre for Cellular + Biomolecular Research at the University of Toronto.
