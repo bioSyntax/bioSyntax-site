@@ -21,6 +21,8 @@ image:
 }
 </style>
 
+# Current 
+
 <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-around; width: 100%;">
 <div class="human" style="background-color:#ddd;">
 
@@ -70,12 +72,11 @@ image:
 <div class="human" style="background-color:#ddd;">
 
   <img align="right" style="width: 100px; height: 100px" 
-  src="{{ "/images/hu/hl.png" | prepend: site.baseurl }}">
+  src="{{ "/images/hu/atcg.png" | prepend: site.baseurl }}">
   
-  <b>Hannah Le</b> <br>
-  <i>Thesis Student/Consultant</i>
-  <p style="width: calc(100% - 100px - 8px);"><i>Non-dark matter in the universe hoping to understand dark world of viruses.</i></p>
-  <p><a href="https://github.com/hannahhanle">gh</a> </p>
+  <b>Sergei Lenskii</b> <br>
+  <i>Research Associate</i>
+  <p style="width: calc(100% - 100px - 8px);"><i>...</i></p>
 
 </div>
 
@@ -96,7 +97,7 @@ image:
   src="{{ "/images/hu/am.png" | prepend: site.baseurl }}">
   
   <b>Alex Morales</b> <br>
-  <i>Software Engineer</i>
+  <i>Software Consultant (External)</i>
   <p style="width: calc(100% - 100px - 8px);"><i>20+ or so years jumping between academia, industry and (tech-enabled) seclusion.</i></p>
   <p><a href="https://www.linkedin.com/in/moralestapia/">linkedin</a> </p>
 
@@ -112,5 +113,19 @@ image:
   <p style="width: calc(100% - 100px - 8px);"><i>...</i></p>
 
 </div>
+
+</div>
+
+# Alumni
+
+<div class="human" style="background-color:#ddd;">
+
+  <img align="right" style="width: 100px; height: 100px" 
+  src="{{ "/images/hu/hl.png" | prepend: site.baseurl }}">
+  
+  <b>Hannah Le</b> <br>
+  <i>Thesis Student/Consultant</i>
+  <p style="width: calc(100% - 100px - 8px);"><i>Non-dark matter in the universe hoping to understand dark world of viruses.</i></p>
+  <p><a href="https://github.com/hannahhanle">gh</a> </p>
 
 </div>
