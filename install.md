@@ -326,6 +326,10 @@ Once, the package is installed, please read `/usr/share/doc/biosyntax-less/READM
 ## vscode
 **(Linux / Mac / Win)**
 
+```
+Caution: Installing bioSyntax will change your "User Theme" colors in VScode for all file-formats, not just bio file formats.
+```
+
 1. Open Visual Studio Code
 2. Open Extensions (Ctrl+Shift+X for Windows/Linux and ⇧+⌘+X for Mac)
 3. Search "bioSyntax"
